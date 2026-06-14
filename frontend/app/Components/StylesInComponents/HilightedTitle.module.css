@@ -1,0 +1,69 @@
+.mainCont {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner {
+  padding: 1rem 2px;
+  position: relative;
+  inset: 5px;
+  scale: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.firstTopLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.firstBottomRight {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.topLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bottomRight {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.mainCont {
+  position: relative;
+  display: inline-block;
+  /* کانتینر هم‌اندازه متن داخلش می‌شود */
+  /* ایجاد فضای کافی برای قرار گرفتن خطوط SVG در گوشه‌ها */
+}
+
+.inner {
+  padding: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.svgTop {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  z-index: 1;
+}
+
+.svgBottomContainer {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  transform: rotate(180deg);
+  z-index: 1;
+}
