@@ -18,6 +18,7 @@
   src: url("/fonts/Estedad-ExtraBold.ttf") format("truetype");
   font-weight: 600;
 }
+
 html {
   height: 100%;
 }
@@ -63,3 +64,31 @@ p{
   transform: translate(-50%,-50%);
 }
 
+.backGradBlue, .backGradOrange{
+  position: absolute;
+  z-index: -1;
+  opacity: .4;
+  width: 50%;
+  height: 50%;
+}
+.backGradBlue{
+  top: 1rem;
+  left: 1rem;
+  background-image: url(../public/BackCrossBlue.svg);
+}
+.backGradOrange{
+  bottom: 2rem;
+  right: 1rem;
+  background-image: url(../public/BackCrossOrange.svg);
+}
+
+.BlueSquare{
+  width: 150px;
+  height: 150px;
+  border-radius: 35px;
+  top: 0;
+  right: 40px;
+  position: absolute;
+  z-index: 0;
+  background-color: #175DE3;
+}

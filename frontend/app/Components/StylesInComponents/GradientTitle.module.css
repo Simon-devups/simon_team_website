@@ -1,0 +1,30 @@
+.cont{
+    position: relative;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 4rem 2rem;
+}
+
+.firstText{
+    background-image: linear-gradient(to top , transparent 20%, #FFBA3B);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 400;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    font-family: var(--font-dynapuff);
+}
+.secondText{
+    color: #175DE3;
+    font-weight: 900;
+    font-size: 2.2rem;
+    transform: translateY(-2.2rem);
+}
+.image{
+    position: absolute;
+    top: 40%;
+    left: 90%;
+    transform: translateY(50%);
+}
