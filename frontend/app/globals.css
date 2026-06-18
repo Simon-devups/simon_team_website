@@ -87,7 +87,8 @@ p{
   height: 150px;
   border-radius: 35px;
   top: 0;
-  right: 40px;
+  right: 48%;
+  transform: translateX(400%);
   position: absolute;
   z-index: 0;
   background-color: #175DE3;
