@@ -9,6 +9,7 @@ import Line1 from '../public/Line 1.svg'
 import arrow from '../public/arrow.svg'
 import orangeArrow from '../public/OrangeArrow.svg'
 import simon from '../public/simon.svg'
+import GradientTitle from "./Components/GradientTitle";
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
           <div style={{ display: 'flex', gap: '1.4rem' }}>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <span dir="ltr" style={{ fontSize: '3rem', color: '#FFBA3B' , textWrap: 'nowrap'}}>+  100</span>
+              <span dir="ltr" style={{ fontSize: '3rem', color: '#FFBA3B', textWrap: 'nowrap' }}>+  100</span>
               <div style={{ fontFamily: 'estedad' }}>
                 <div style={{ fontSize: '18px', fontWeight: '600', color: '#545658' }}>پروژه موفق</div>
                 <div style={{ fontSize: '11px', fontWeight: '500', color: '#545658' }}>با همراهی معتبر برند های کشور</div>
@@ -61,7 +62,7 @@ export default function Home() {
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <span dir="ltr" style={{ fontSize: '3rem', color: '#FFBA3B' , textWrap: 'nowrap'}}>+  80</span>
+              <span dir="ltr" style={{ fontSize: '3rem', color: '#FFBA3B', textWrap: 'nowrap' }}>+  80</span>
               <div style={{ fontFamily: 'estedad' }}>
                 <div style={{ fontSize: '18px', fontWeight: '600', color: '#545658' }}>پروژه موفق</div>
                 <div style={{ fontSize: '11px', fontWeight: '500', color: '#545658' }}>با همراهی معتبر برند های کشور</div>
@@ -141,7 +142,95 @@ export default function Home() {
         </div>
 
       </section>
+      <GradientTitle />
 
+      {/* سرویس سایمون */}
+      <section className={styles.servicesSection}>
+
+        {/* استایل گلوبال */}
+        <div className="BlueSquare"></div>
+
+        <div className={styles.servicesSection__threeCont}>
+          <div className={styles.servicesSection__icon}>
+            <Image width={50} height={50} src={'/building.svg'} alt="icon"></Image>
+          </div>
+          <p className={styles.servicesSection__title}>سایت فروشگاهی</p>
+
+          {/* استایل گلوبال */}
+          <div className="backGradBlue"></div>
+          <div className="backGradOrange"></div>
+        </div>
+
+        <div className={styles.servicesSection__threeCont}>
+          <p>تیم سـایمون از دل یک باور ساده متولد شد که هر کسب‌وکاری، هرچقدر هم کوچک، سزاوار حضوری قدرتمند در دنیای دیجیتال است. ما جمعی از معماران دیجیتال، طراحان خلاق و استراتژیست‌های حرفه‌ای هستیم که کنار هم آمده‌ایم تا برندها را از تیم سـایمون از دل یک  خلاق و استراتژیست‌های حرفه‌ای هستیم که کنار هم آمده‌ایم تا برندها را از تیم تا برندها را از تیم سـایمون از دل یک  خلاق و استراتژیست‌هایکیا تا برندها را از تیم سـایمون از دل یک  خلاق و استراتژیست‌های حرفه‌ای هستیم که کنار هم آمده‌ایم تا برندها را از تیم تا برندها را از تیم سـایمون از دل یک  خلاق و استراتژیست‌هایکیا </p>
+        </div>
+
+        <div className={styles.servicesSection__threeCont}>
+          <div className={styles.servicesSection__icon}>
+            <Image width={50} height={50} src={'/building.svg'} alt="icon"></Image>
+          </div>
+          <p className={styles.servicesSection__title}>سایت شرکتی</p>
+          {/* استایل گلوبال */}
+          <div className="backGradBlue"></div>
+          <div className="backGradOrange"></div>
+        </div>
+        
+      </section>
+
+      <GradientTitle text1="Website design steps" text2="مراحل طراحی سایت" />
+
+      <section className={styles.needingSection}>
+        <div className={styles.needingSection_firstDiv}>
+          <div className={styles.needingSection__right}>
+            <h3>کسب و کار شما چه <span>نیازی به سایت</span> دارد؟</h3>
+            <p>سایت، ویترین همیشگی کسب‌وکار شماست؛ جایی که مشتری بدون نیاز به تماس، شما را پیدا می‌کند، باور می‌کند و می‌ماند. سایت یعنی اعتبار، دسترسی ۲۴ ساعته و فروشی بدون مرز جغرافیایی.</p>
+          </div>
+
+          <div className={styles.needingSection__bottomLeft}>
+            <div className={styles.needingSection__topLeft}></div>
+
+            <div className={styles.needingSection__SquareCont}>
+              <div className={styles.needingSection__Squares}></div>
+              <div className={styles.needingSection__Squares}></div>
+            </div>
+
+          </div>
+
+          <img style={{position: 'absolute' , bottom: '0' , left: '0' , maxHeight: '200px'}} src="/OrangeArrowDown.svg" alt="arrow" />
+        </div>
+
+      </section>
+
+      <section></section>
+
+      <section className={styles.commentSection}>
+        <figure className={styles.commentSection__figure}>
+          <img src="/coatation.svg" style={{position: 'absolute' , top: '-25px' , left: '15px', background: 'white' , padding: '.5rem'}} />
+          <div className={styles.commentSection__detailCont}>
+            <div className={styles.commentSection__avatarCont}></div>
+            <figcaption className={styles.commentSection__userName}>علیرضا احمدی</figcaption>
+          </div>
+          <blockquote className={styles.commentSection__comment}>سلام من احمدی هستم از عملکرد  تیم سایمون به شدت راضی بودم طی پروژه سلام من احمدی هستم از عملکرد  تیم سایمون به شدت راضی بودم طی پروژه </blockquote>
+        </figure>
+        
+        <figure className={styles.commentSection__figure}>
+          <img src="/coatation.svg" style={{position: 'absolute' , top: '-25px' , left: '15px', background: 'white' , padding: '.5rem'}} />
+          <div className={styles.commentSection__detailCont}>
+            <div className={styles.commentSection__avatarCont}></div>
+            <figcaption className={styles.commentSection__userName}>علیرضا احمدی</figcaption>
+          </div>
+          <blockquote className={styles.commentSection__comment}>سلام من احمدی هستم از عملکرد  تیم سایمون به شدت راضی بودم طی پروژه سلام من احمدی هستم از عملکرد  تیم سایمون به شدت راضی بودم طی پروژه </blockquote>
+        </figure>
+
+        <figure className={styles.commentSection__figure}>
+          <img src="/coatation.svg" style={{position: 'absolute' , top: '-25px' , left: '15px', background: 'white' , padding: '.5rem'}} />
+          <div className={styles.commentSection__detailCont}>
+            <div className={styles.commentSection__avatarCont}></div>
+            <figcaption className={styles.commentSection__userName}>علیرضا احمدی</figcaption>
+          </div>
+          <blockquote className={styles.commentSection__comment}>سلام من احمدی هستم از عملکرد  تیم سایمون به شدت راضی بودم طی پروژه سلام من احمدی هستم از عملکرد  تیم سایمون به شدت راضی بودم طی پروژه </blockquote>
+        </figure>
+      </section>
     </>
   );
 }
