@@ -10,6 +10,7 @@ import arrow from '../public/arrow.svg'
 import orangeArrow from '../public/OrangeArrow.svg'
 import simon from '../public/simon.svg'
 import GradientTitle from "./Components/GradientTitle";
+import { CardTriangle } from "./Components/CardTriangle";
 
 export default function Home() {
   return (
@@ -174,10 +175,57 @@ export default function Home() {
           <div className="backGradBlue"></div>
           <div className="backGradOrange"></div>
         </div>
-        
+
       </section>
 
       <GradientTitle text1="Website design steps" text2="مراحل طراحی سایت" />
+
+      <section className={styles.commentSection}>
+        <CardTriangle />
+        <CardTriangle />
+        <CardTriangle />
+        
+      </section>
+
+      {/* شکل آبی بزرگ */}
+      <svg width="100%" height="530" viewBox="0 0 1416 530" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_0_1)">
+          <path d="M-28 80.1042C-28 80.1042 188.684 -19.0341 332 3.2685C470.207 24.776 549.115 116.421 690.5 116.538C833.045 116.656 888.793 70.9533 1031 63.8713C1171.26 56.8865 1412 116.538 1412 116.538V409.091C1412 409.091 1258.24 489.563 1091.5 499.273C966.983 506.525 849.298 457.024 724.5 461.036C579.504 465.697 477.14 499.384 332 499.273C186.295 499.162 -28 435.063 -28 435.063V80.1042Z" fill="url(#paint0_radial_0_1)" />
+        </g>
+        <path d="M892 63.9984C892 63.9984 991.133 33.3295 1056.48 36.2695C1117.72 39.0252 1200.6 50.4083 1200.6 50.4083" stroke="url(#paint1_radial_0_1)" strokeWidth="3" />
+        <path d="M418.726 518.71C418.726 518.71 321.255 529.871 256.133 523.752C195.093 518.017 101.469 493 101.469 493" stroke="url(#paint2_radial_0_1)" strokeWidth="3" />
+        <path d="M1241.73 500C1241.73 500 1146.78 524.685 1081.45 527.735C1020.2 530.594 924 518.919 924 518.919" stroke="url(#paint3_radial_0_1)" strokeWidth="3" />
+        <path d="M-29 80.1042C-29 80.1042 187.684 -19.0341 331 3.2685C469.207 24.776 548.115 116.421 689.5 116.538C832.045 116.656 887.793 70.9533 1030 63.8713C1170.26 56.8865 1411 116.538 1411 116.538V409.091C1411 409.091 1257.24 489.563 1090.5 499.273C965.983 506.525 848.298 457.024 723.5 461.036C578.504 465.697 476.14 499.384 331 499.273C185.295 499.162 -29 435.063 -29 435.063V80.1042Z" fill="#5A8EF0" fillOpacity="0.2" />
+        <defs>
+          <filter id="filter0_d_0_1" x="-32" y="0" width="1448" height="508" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+            <feOffset dy="4" />
+            <feGaussianBlur stdDeviation="2" />
+            <feComposite in2="hardAlpha" operator="out" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0.0901961 0 0 0 0 0.364706 0 0 0 0 0.890196 0 0 0 0.25 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape" />
+          </filter>
+          <radialGradient id="paint0_radial_0_1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(692 286.726) rotate(90) scale(283.458 720)">
+            <stop stopColor="#5A8EF0" />
+            <stop offset="1" stopColor="#175DE3" />
+          </radialGradient>
+          <radialGradient id="paint1_radial_0_1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1050.27 62.5998) rotate(1.84154) scale(159.149 159.149)">
+            <stop stopColor="#175DE3" />
+            <stop offset="1" stopColor="#FFFAFA" />
+          </radialGradient>
+          <radialGradient id="paint2_radial_0_1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(260.34 502.865) rotate(-175.367) scale(159.149 159.148)">
+            <stop stopColor="#175DE3" />
+            <stop offset="1" stopColor="#FFFAFA" />
+          </radialGradient>
+          <radialGradient id="paint3_radial_0_1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1082.69 506.465) rotate(176.592) scale(159.149 159.148)">
+            <stop stopColor="#175DE3" />
+            <stop offset="1" stopColor="#FFFAFA" />
+          </radialGradient>
+        </defs>
+      </svg>
+
 
       <section className={styles.needingSection}>
         <div className={styles.needingSection_firstDiv}>
@@ -196,7 +244,7 @@ export default function Home() {
 
           </div>
 
-          <img style={{position: 'absolute' , bottom: '0' , left: '0' , maxHeight: '200px'}} src="/OrangeArrowDown.svg" alt="arrow" />
+          <img style={{ position: 'absolute', bottom: '0', left: '0', maxHeight: '200px' }} src="/OrangeArrowDown.svg" alt="arrow" />
         </div>
 
       </section>
@@ -205,16 +253,7 @@ export default function Home() {
 
       <section className={styles.commentSection}>
         <figure className={styles.commentSection__figure}>
-          <img src="/coatation.svg" style={{position: 'absolute' , top: '-25px' , left: '15px', background: 'white' , padding: '.5rem'}} />
-          <div className={styles.commentSection__detailCont}>
-            <div className={styles.commentSection__avatarCont}></div>
-            <figcaption className={styles.commentSection__userName}>علیرضا احمدی</figcaption>
-          </div>
-          <blockquote className={styles.commentSection__comment}>سلام من احمدی هستم از عملکرد  تیم سایمون به شدت راضی بودم طی پروژه سلام من احمدی هستم از عملکرد  تیم سایمون به شدت راضی بودم طی پروژه </blockquote>
-        </figure>
-        
-        <figure className={styles.commentSection__figure}>
-          <img src="/coatation.svg" style={{position: 'absolute' , top: '-25px' , left: '15px', background: 'white' , padding: '.5rem'}} />
+          <img src="/coatation.svg" style={{ position: 'absolute', top: '-25px', left: '15px', background: 'white', padding: '.5rem' }} />
           <div className={styles.commentSection__detailCont}>
             <div className={styles.commentSection__avatarCont}></div>
             <figcaption className={styles.commentSection__userName}>علیرضا احمدی</figcaption>
@@ -223,7 +262,16 @@ export default function Home() {
         </figure>
 
         <figure className={styles.commentSection__figure}>
-          <img src="/coatation.svg" style={{position: 'absolute' , top: '-25px' , left: '15px', background: 'white' , padding: '.5rem'}} />
+          <img src="/coatation.svg" style={{ position: 'absolute', top: '-25px', left: '15px', background: 'white', padding: '.5rem' }} />
+          <div className={styles.commentSection__detailCont}>
+            <div className={styles.commentSection__avatarCont}></div>
+            <figcaption className={styles.commentSection__userName}>علیرضا احمدی</figcaption>
+          </div>
+          <blockquote className={styles.commentSection__comment}>سلام من احمدی هستم از عملکرد  تیم سایمون به شدت راضی بودم طی پروژه سلام من احمدی هستم از عملکرد  تیم سایمون به شدت راضی بودم طی پروژه </blockquote>
+        </figure>
+
+        <figure className={styles.commentSection__figure}>
+          <img src="/coatation.svg" style={{ position: 'absolute', top: '-25px', left: '15px', background: 'white', padding: '.5rem' }} />
           <div className={styles.commentSection__detailCont}>
             <div className={styles.commentSection__avatarCont}></div>
             <figcaption className={styles.commentSection__userName}>علیرضا احمدی</figcaption>
@@ -231,6 +279,7 @@ export default function Home() {
           <blockquote className={styles.commentSection__comment}>سلام من احمدی هستم از عملکرد  تیم سایمون به شدت راضی بودم طی پروژه سلام من احمدی هستم از عملکرد  تیم سایمون به شدت راضی بودم طی پروژه </blockquote>
         </figure>
       </section>
+
     </>
   );
 }

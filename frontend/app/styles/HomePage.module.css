@@ -140,6 +140,7 @@
 /*اگر از باکس شدو استفاده بکنیم
 box-shadow: 0 0 40px #0a52ff33; */
 .needingSection{
+    margin: 2rem 0;
     display: flex;
     justify-content: center;
     gap: 1rem;

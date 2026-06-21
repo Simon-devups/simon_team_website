@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { DynaPuff } from "next/font/google";
 import "./globals.css";
+import Footer from "./layout/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +33,10 @@ export default function RootLayout({ children }) {
           ${geistMono.variable}
           ${dynaPuff.variable}
         `}
-      >{children}</body>
+      >
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

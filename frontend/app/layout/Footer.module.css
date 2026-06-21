@@ -1,0 +1,8 @@
+.left{
+    background-image: url(../../public/footerBack.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: 0rem;
+    background-position-x: -2rem;
+    min-height: 700px;
+}
