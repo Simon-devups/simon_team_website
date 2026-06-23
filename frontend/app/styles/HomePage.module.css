@@ -137,8 +137,6 @@
     font-size: 1.4rem;
 }
 
-/*اگر از باکس شدو استفاده بکنیم
-box-shadow: 0 0 40px #0a52ff33; */
 .needingSection{
     display: flex;
     justify-content: center;
@@ -244,3 +242,48 @@ box-shadow: 0 0 40px #0a52ff33; */
         font-size: 0.5rem;
     }
 }
+
+
+
+.cardsContainer {
+  position: relative;
+  display: flex;
+  gap: 20px;       
+  padding: 40px 0;
+}
+
+.bgPatternWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px; 
+  z-index: 1; 
+  pointer-events: none; 
+}
+
+.cardColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+  z-index: 2; 
+}
+
+.offsetColumn {
+  transform: translateY(80px); 
+}
+
+.cardItem {
+  width: 234px;              
+  height: 303px;             
+  background-color: #FFFAFA;  
+  border: 2px solid #175DE3;  
+  border-radius: 35px;        
+  box-shadow: 0px 8px 20px rgba(23, 93, 227, 0.04); 
+  transition: transform 0.3s ease;
+}
+
+.cardItem:hover {
+  transform: translateY(-5px);
+}
+

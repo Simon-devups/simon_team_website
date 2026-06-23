@@ -1,10 +1,28 @@
 import React from 'react'
 import styles from "./StylesInComponents/HilightedTitle.module.css"
 
-const HilightedTitle = ({ children , fontSize , color}) => {
+// اضافه کردن پراپ‌های افقی و عمودی با مقدار پیش‌فرض 0px
+const HilightedTitle = ({ 
+    children, 
+    fontSize, 
+    color, 
+    topSvgOffset = '0px', 
+    bottomSvgOffset = '0px',
+    topSvgLeftOffset = '0px',     /* پراپ جدید برای حرکت چپ/راست اس‌وی‌جی بالا */
+    bottomSvgRightOffset = '0px'  /* پراپ جدید برای حرکت چپ/راست اس‌وی‌جی پایین */
+}) => {
     return (
-        <div className={styles.mainCont}>
-            {/* اس وی جی بالایی - با آی‌دی‌های منحصربه‌فرد top */}
+        /* تمام متغیرهای عمودی و افقی به استایل کانتینر اصلی پاس داده می‌شوند */
+        <div 
+            className={styles.mainCont} 
+            style={{ 
+                '--top-offset': topSvgOffset, 
+                '--bottom-offset': bottomSvgOffset,
+                '--top-left-offset': topSvgLeftOffset,
+                '--bottom-right-offset': bottomSvgRightOffset
+            }}
+        >
+            {/* اس وی جی بالایی */}
             <svg className={styles.svgTop} width="56" height="70" viewBox="0 0 56 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.0515 51.6192L10.0515 30.107C10.0515 19.0613 19.0058 10.107 30.0515 10.107L43.0755 10.107" stroke="url(#paint0_linear_top)" strokeWidth="2" />
                 <path d="M0.999874 69.7491L0.999854 26C0.999848 12.1929 12.1927 0.999997 25.9999 0.999998L55.6913 1" stroke="url(#paint1_linear_top)" strokeWidth="2" />
@@ -26,7 +44,7 @@ const HilightedTitle = ({ children , fontSize , color}) => {
                 {children}
             </div>
 
-            {/* اس وی جی پایینی - با آی‌دی‌های منحصربه‌فرد bottom و استایل چرخیده */}
+            {/* اس وی جی پایینی */}
             <div className={styles.svgBottomContainer}>
                 <svg width="56" height="70" viewBox="0 0 56 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.0515 51.6192L10.0515 30.107C10.0515 19.0613 19.0058 10.107 30.0515 10.107L43.0755 10.107" stroke="url(#paint0_linear_bottom)" strokeWidth="2" />
