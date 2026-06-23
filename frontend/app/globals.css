@@ -3,16 +3,19 @@
   src: url("/fonts/Font_zed کولاک.ttf") format("truetype");
   font-weight: normal;
 }
+
 @font-face {
   font-family: 'estedad';
   src: url("/fonts/Estedad-Regular.ttf") format("truetype");
   font-weight: 400;
 }
+
 @font-face {
   font-family: 'estedad';
   src: url("/fonts/Estedad-Medium.ttf") format("truetype");
   font-weight: 500;
 }
+
 @font-face {
   font-family: 'estedad';
   src: url("/fonts/Estedad-ExtraBold.ttf") format("truetype");
@@ -53,36 +56,39 @@ a {
   text-decoration: none;
 }
 
-p{
+p {
   font-family: 'estedad';
 }
 
-.middleAbsolute{
+.middleAbsolute {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
-.backGradBlue, .backGradOrange{
+.backGradBlue,
+.backGradOrange {
   position: absolute;
   z-index: -1;
   opacity: .4;
   width: 50%;
   height: 50%;
 }
-.backGradBlue{
+
+.backGradBlue {
   top: 1rem;
   left: 1rem;
   background-image: url(../public/BackCrossBlue.svg);
 }
-.backGradOrange{
+
+.backGradOrange {
   bottom: 2rem;
   right: 1rem;
   background-image: url(../public/BackCrossOrange.svg);
 }
 
-.BlueSquare{
+.BlueSquare {
   width: 150px;
   height: 150px;
   border-radius: 35px;
@@ -92,4 +98,13 @@ p{
   position: absolute;
   z-index: 0;
   background-color: #175DE3;
+}
+
+@media (max-width: 1330px) {
+  .BlueSquare {
+    right: unset;
+    left: 80%;
+    transform: unset;
+    transform: translateX(-50%);
+  }
 }
