@@ -9,6 +9,8 @@ import Line1 from '../public/Line 1.svg'
 import arrow from '../public/arrow.svg'
 import orangeArrow from '../public/OrangeArrow.svg'
 import simon from '../public/simon.svg'
+import BlueCrosses from '../public/Crosses.svg'
+
 import GradientTitle from "./Components/GradientTitle";
 import { CardTriangle } from "./Components/CardTriangle";
 
@@ -112,26 +114,13 @@ export default function Home() {
       </section>
 
       <section className={styles.simonIntroduceSection}>
-        <div dir="ltr">
-          <svg className={styles.svg} width="90%" height="500" viewBox="0 0 1303 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <radialGradient id="bgGradient" cx="50%" cy="35%" r="60%">
-                <stop offset="0%" stopColor="#80acff" stopOpacity="1" />
-                <stop offset="100%" stopColor="#1e6dff" stopOpacity="1" />
-              </radialGradient>
-              <clipPath id="shapeClip">
-                <path d="M-2 0H1003C1168.69 0 1303 134.315 1303 300V460C1303 482.091 1285.09 500 1263 500H-2V0Z" />
-              </clipPath>
-            </defs>
+        <div dir="ltr" className={styles.simonIntroduceSection__SvgCont}>
 
-            <rect width="1303" height="500" fill="url(#bgGradient)" clipPath="url(#shapeClip)" />
-            <path
-              d="M-2 0H1003C1168.69 0 1303 134.315 1303 300V460C1303 482.091 1285.09 500 1263 500H-2V0Z"
-              fill="none"
-              stroke="#175ee300"
-              strokeWidth="5"
-            />
-          </svg>
+          {/* برای زیبایی */}
+          <Image className={styles.simonIntroduceSection__FakeLogo} src={simon} alt="logo"></Image>
+          <Image style={{transform: 'rotate(12deg)' , top: 'unset' , bottom: '-150px' , left: 'unset' ,  right: '250px'}} className={styles.simonIntroduceSection__FakeLogo} src={simon} alt="logo"></Image>
+          <Image style={{transform: 'rotate(0deg)' , top: '10px' , bottom: 'unset' , left: 'unset' ,  right: '20px'}} className={styles.simonIntroduceSection__FakeLogo} src={BlueCrosses} alt="logo"></Image>
+
           <Image className={styles.simonIntroduceSection__Logo} src={simon} alt="logo"></Image>
           <Image className={styles.simonIntroduceSection__orangeArrow} src={orangeArrow} alt="logo"></Image>
           <div className={styles.simonIntroduceSection__paragraph} dir="rtl">

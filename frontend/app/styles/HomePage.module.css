@@ -45,29 +45,46 @@
 }
 
 .simonIntroduceSection {
-    position: relative;
+    direction: ltr;
 }
 
+.simonIntroduceSection__SvgCont{
+    position: relative;
+    background-color: #175DE3;
+    background-image: radial-gradient(#ffffff4c, rgba(0, 128, 0, 0));
+    border-radius: 0px 300px 20px 0px;
+    min-height: 500px;
+    direction: rtl;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .simonIntroduceSection__Logo {
-    position: absolute;
+    /* position: absolute;
     top: 120px;
-    right: 30%;
+    right: 30%; */
     width: 15vw;
 }
 
-.simonIntroduceSection__orangeArrow {
+.simonIntroduceSection__FakeLogo{
+    opacity: 0.4;
+    transform: rotate(35deg);
     position: absolute;
-    top: 100px;
-    right: 40%;
+    top: -120px;
+    left: 85px;
+}
+
+.simonIntroduceSection__orangeArrow {
     width: 15vw;
 }
 
 .simonIntroduceSection__paragraph {
     color: white;
-    position: absolute;
+    /* position: absolute;
     top: 100px;
-    right: 52%;
+    right: 52%; */
     width: 40vw;
     line-height: 2.17;
     /* max-width: 650px; */

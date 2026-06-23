@@ -60,6 +60,14 @@ p {
   font-family: 'estedad';
 }
 
+
+/* انیمیشن ها */
+.goUp{ transition: transform 0.2s ease-in-out }
+.goUp:hover{
+  transform: translateY(-10px);
+}
+
+
 .middleAbsolute {
   position: absolute;
   top: 50%;
