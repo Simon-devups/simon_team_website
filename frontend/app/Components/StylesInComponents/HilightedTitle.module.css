@@ -43,8 +43,6 @@
 .mainCont {
   position: relative;
   display: inline-block;
-  /* کانتینر هم‌اندازه متن داخلش می‌شود */
-  /* ایجاد فضای کافی برای قرار گرفتن خطوط SVG در گوشه‌ها */
 }
 
 .inner {
