@@ -1,0 +1,171 @@
+
+/* کانتینر اصلی فرم (تنظیم برای قرارگیری در وسط صفحه بدون ابسولوت) */
+.consultationContainer {
+  background: #175DE3;
+  width: 100%;
+  max-width: 1115px;
+  height: 503px;
+  border-radius: 35px 35px 85px 85px;
+  padding: 30px 50px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 15px 35px rgba(18, 73, 202, 0.2);
+  position: relative; 
+  overflow: hidden; 
+  
+  /* 🟢 وسط‌چین کردن خود کانتینر و تراز کردن اجزای داخلی */
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bgShape {
+  position: absolute;
+  pointer-events: none; 
+  z-index: 1; 
+}
+
+/* پترن ضربدری یا نقطه‌ای سمت راست بالا */
+.patternRightTop {
+  top: 22%;
+  right: -37px;
+  width: 440px;
+  height: 350px;
+}
+
+/* پترن ضربدری سمت چپ پایین */
+.patternLeftBottom {
+  bottom: 13%;
+  left: -37px;
+  width: 440px;
+  height: 350px;
+}
+
+/* فلش بالای تیتر */
+.arrowGraphic {
+  position: absolute;
+  top: 55px;
+  left: 32%; 
+  width: 35px;
+  z-index: 2;
+}
+
+/* محتوای فرم (قرارگیری در لایه بالاتر از تصاویر تزیینی) */
+.formTitle, .formSubtitle, .consultationForm {
+  position: relative;
+  z-index: 3; 
+}
+
+/* تیتر اصلی فرم */
+.formTitle {
+  font-family: 'koolak', sans-serif;
+  font-size: 34px;
+  color: #FFBA3B; 
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+/* زیرعنوان فرم */
+.formSubtitle {
+  font-family: 'estedad', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: #FFFAFA;
+  margin-bottom: 50px;
+  line-height: 1.8;
+}
+
+/* ساختار کلی فرم */
+.consultationForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+/* ردیف فیلدهای دوتایی */
+.inputGroup {
+  display: flex;
+  width: 100%;
+  max-width: 993px;
+  height: 65px;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.inputGroup input {
+  flex: 1;
+}
+
+/* استایل عمومی تمامی اینپوت‌ها و تسکت‌اریا */
+.consultationForm input[type="text"],
+.consultationForm input[type="tel"],
+.consultationForm textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #FFFAFA;
+  font-size: 14px;
+  color: #545658;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-family: 'estedad', sans-serif;
+  font-weight: 500;
+
+}
+
+.consultationForm input::placeholder,
+.consultationForm textarea::placeholder {
+  text-align: right;
+}
+
+/* تنظیمات باکس متن پیام */
+.consultationForm textarea {
+  resize: none;
+  height: 118px;
+  width: 100%;
+  max-width: 993px;
+  margin: 0 auto;
+}
+
+/* دکمه ارسال درخواست */
+.submitBtn {
+  background-color: #FFBA3B;
+  color: #FFFAFA;
+  font-family: 'koolak', sans-serif;
+  border: none;
+  width: 406px;
+  height: 58px;
+  font-size: 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  align-self: center;
+  transition: all 0.2s ease;
+}
+
+.submitBtn:hover {
+  background-color: #e6a735;
+  transform: translateY(-2px);
+}
+
+/* واکنش‌گرایی موبایل */
+@media (max-width: 900px) {
+  .consultationContainer {
+    height: auto;
+    padding: 30px 20px;
+    border-radius: 35px;
+  }
+  .inputGroup {
+    flex-direction: column;
+    height: auto;
+  }
+  .submitBtn {
+    width: 100%;
+  }
+  .bgShape, .arrowGraphic {
+    display: none; /* مخفی کردن عکس‌های تزیینی در موبایل برای خوانایی بهتر */
+  }
+}
