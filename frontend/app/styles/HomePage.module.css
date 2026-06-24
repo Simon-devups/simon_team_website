@@ -69,6 +69,7 @@
 }
 
 .simonIntroduceSection__FakeLogo{
+    width: 15vw;
     opacity: 0.4;
     transform: rotate(35deg);
     position: absolute;
@@ -279,6 +280,10 @@ box-shadow: 0 0 40px #0a52ff33; */
     }
 }
 @media (max-width: 1150px) {
+    .simonIntroduceSection__FakeLogo{
+        width: 25vw;
+    }
+
     .servicesSection{
         flex-direction: column;
     }
