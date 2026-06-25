@@ -67,3 +67,42 @@
   transform: rotate(180deg);
   z-index: 1;
 }
+
+
+
+
+
+.svgTop {
+  position: absolute;
+  top: calc(20px + var(--top-offset, 0px));
+  left: 0;
+  z-index: 1;
+  width: 51px;
+  height: auto; 
+}
+
+.svgBottomContainer {
+  position: absolute;
+  bottom: calc(20px + var(--bottom-offset, 0px));
+  right: 0;
+  transform: rotate(180deg); 
+  z-index: 1;
+}
+.svgBottomContainer svg {
+  width: 51px;
+  height: auto;
+}
+.svgTop {
+  position: absolute;
+  top: calc(20px + var(--top-offset, 0px));
+  left: calc(0px + var(--top-left-offset, 0px));
+  z-index: 1;
+}
+
+.svgBottomContainer {
+  position: absolute;
+  bottom: calc(20px + var(--bottom-offset, 0px));
+  right: calc(0px + var(--bottom-right-offset, 0px));
+  transform: rotate(180deg);
+  z-index: 1;
+}
