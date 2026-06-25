@@ -28,8 +28,6 @@
     align-items: center;
 }
 
-.sectionNeed__Left {}
-
 .sectionNeed__Right {
     display: flex;
     flex-direction: column;
@@ -315,6 +313,7 @@
   display: flex;
   gap: 20px;       
   padding: 40px 0;
+  margin-left: 100px;
 }
 
 .bgPatternWrapper {
@@ -350,5 +349,165 @@
 
 .cardItem:hover {
     transform: translateY(-5px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pageContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px 0;
+
+}
+
+.mainContactSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0px;
+    width: 100%;
+    max-width: 1500px;
+    padding: 0 30px;
+}
+
+.contactLeftMap {
+    flex: 1;
+    border-radius: 35px;
+}
+
+.contactRightContent {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+
+.cardsRow {
+    display: flex;
+    gap: 20px;
+    
+    width: 100%;
+    margin-top: 15px;
+}
+
+.contactBox {
+    display: flex;
+    flex: 1;
+    height: 119px;
+    background: #FFFAFA;
+    border: 1px solid #EAE9F3;
+    border-radius: 37px;
+    overflow: hidden;
+    direction: ltr; 
+    max-width: 315px;
+}
+
+.contactBox__Left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    background-color: #FFFAFA;
+}
+
+.phoneNum {
+    font-family: 'estedad', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    color: #545658;
+}
+
+.phoneTxt {
+    font-family: 'estedad', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #175DE3;
+}
+
+.contactBox__Right {
+    width: 95px;
+    height: 100%;
+    background-color: #FFBA3B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phoneSvg {
+    width: 40px;
+    height: 40px;
+    color: #FFFAFA;
+    transform: scaleX(-1);
+}
+
+.socialFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1270px;
+    width: calc(100% - 60px);
+    height: 119px;
+    margin: 20px auto 0 auto;
+    padding: 25px 80px;
+    background-color: #FFFAFA;
+    border:1px solid #EAE9F3;
+    border-radius: 37px;
+}
+
+.socialText {
+    font-family: 'estedad', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #545658;
+}
+
+.socialIconsGroup {
+    display: flex;
+    gap: 15px;
+}
+
+.socialBtn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #175DE3;
+    box-shadow: 3px 3px 14px rgba(23, 93, 227, 0.25);
+}
+
+@media (max-width: 992px) {
+    .mainContactSection {
+        flex-direction: column-reverse;
+    }
+    .cardsRow {
+        flex-direction: column;
+    }
+    .socialFooter {
+        flex-direction: column-reverse;
+        gap: 20px;
+        text-align: center;
+    }
 }
 
