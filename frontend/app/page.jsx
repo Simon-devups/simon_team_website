@@ -50,12 +50,11 @@ export default function Home() {
               </HilightedTitle>
               <Image 
               src={arrow} 
-              alt="arrow" 
               style={{  
                 position: 'absolute', 
                 top: '45px',       
                 right: '405px',       
-                zIndex: -1,         
+                zIndex: 3,         
                 width: '53.35px',        
                 height: '30.44px' 
               }}

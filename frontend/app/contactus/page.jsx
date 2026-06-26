@@ -4,6 +4,8 @@ import "../globals.css"
 import styles from "../styles/HomePage.module.css"
 import HilightedTitle from "../Components/HilightedTitle"
 import ConsultationForm from "../Components/requestform";
+import arrow from '../../public/arrow.svg'
+
 
 
 export default function Home() {
@@ -35,6 +37,17 @@ export default function Home() {
                 کــسب و کــار شــما چه <span style={{ color: '#175DE3' }}>نـــیازی بــه سایـــت</span> دارد ؟
               </p>
             </HilightedTitle>
+              <Image 
+              src={arrow}              
+              style={{  
+              position: 'absolute',               
+              top: '45px',                                  
+              right: '405px',       
+              zIndex: 3,         
+              width: '53.35px',        
+              height: '30.44px' 
+                    }}
+              />            
           </div>
 
           <p className={styles.sectionNeed__RightText} style={{ textAlign: 'justify', fontSize: '16px', fontWeight: '500',maxWidth: '650px', width: '100%' }}>

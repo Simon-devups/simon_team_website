@@ -3,6 +3,10 @@ import Image from "next/image";
 import "../globals.css"
 import styles from "../styles/HomePage.module.css"
 import HilightedTitle from "../Components/HilightedTitle"
+import ConsultationBanner from "../Components/banner"
+import arrow from '../../public/arrow.svg'
+
+
 
 
 export default function Home() {
@@ -27,6 +31,17 @@ export default function Home() {
                    کــسب و کــار شــما چه <span style={{ color: '#175DE3' }}>نـــیازی بــه سایـــت</span> دارد ؟
               </p>
               </HilightedTitle>
+              <Image 
+              src={arrow}              
+              style={{  
+              position: 'absolute',               
+              top: '45px',                                  
+              right: '405px',       
+              zIndex: 3,         
+              width: '53.35px',        
+              height: '30.44px' 
+                    }}
+              />
 
 </div>
     <p 
@@ -98,6 +113,17 @@ export default function Home() {
                 کــسب و کــار شــما چه <span style={{ color: '#175DE3' }}>نـــیازی بــه سایـــت</span> دارد ؟
               </p>
             </HilightedTitle>
+                          <Image 
+                          src={arrow} 
+                          style={{  
+                            position: 'absolute', 
+                            top: '45px',       
+                            right: '405px',       
+                            zIndex: 3,         
+                            width: '53.35px',        
+                            height: '30.44px' 
+                          }}
+                          />
           </div>
 
           <p 
@@ -136,6 +162,17 @@ export default function Home() {
                    کــسب و کــار شــما چه <span style={{ color: '#175DE3' }}>نـــیازی بــه سایـــت</span> دارد ؟
               </p>
               </HilightedTitle>
+                            <Image 
+                            src={arrow} 
+                            style={{  
+                              position: 'absolute', 
+                              top: '45px',       
+                              right: '405px',       
+                              zIndex: 3,         
+                              width: '53.35px',        
+                              height: '30.44px' 
+                            }}
+                            />
 
 </div>
     <p 
@@ -162,7 +199,9 @@ export default function Home() {
   
       />
   </div>
-</section>    
+  
+</section>  
+<ConsultationBanner/>  
   
     </>
   );
