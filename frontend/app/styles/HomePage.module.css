@@ -28,8 +28,6 @@
     align-items: center;
 }
 
-.sectionNeed__Left {}
-
 .sectionNeed__Right {
     display: flex;
     flex-direction: column;
@@ -315,6 +313,7 @@
   display: flex;
   gap: 20px;       
   padding: 40px 0;
+  margin-left: 100px;
 }
 
 .bgPatternWrapper {
@@ -352,3 +351,276 @@
     transform: translateY(-5px);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pageContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px 0;
+
+}
+
+.mainContactSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0px;
+    width: 100%;
+    max-width: 1500px;
+    padding: 0 30px;
+}
+
+.contactLeftMap {
+    flex: 1;
+    border-radius: 35px;
+}
+
+.contactRightContent {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+
+.cardsRow {
+    display: flex;
+    gap: 20px;
+    
+    width: 100%;
+    margin-top: 15px;
+}
+
+.contactBox {
+    display: flex;
+    flex: 1;
+    height: 119px;
+    background: #FFFAFA;
+    border: 1px solid #EAE9F3;
+    border-radius: 37px;
+    overflow: hidden;
+    direction: ltr; 
+    max-width: 315px;
+}
+
+.contactBox__Left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    background-color: #FFFAFA;
+}
+
+.phoneNum {
+    font-family: 'estedad', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    color: #545658;
+}
+
+.phoneTxt {
+    font-family: 'estedad', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #175DE3;
+}
+
+.contactBox__Right {
+    width: 95px;
+    height: 100%;
+    background-color: #FFBA3B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phoneSvg {
+    width: 40px;
+    height: 40px;
+    color: #FFFAFA;
+    transform: scaleX(-1);
+}
+
+.socialFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1270px;
+    width: calc(100% - 60px);
+    height: 119px;
+    margin: 20px auto 0 auto;
+    padding: 25px 80px;
+    background-color: #FFFAFA;
+    border:1px solid #EAE9F3;
+    border-radius: 37px;
+}
+
+.socialText {
+    font-family: 'estedad', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #545658;
+}
+
+.socialIconsGroup {
+    display: flex;
+    gap: 15px;
+}
+
+.socialBtn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #175DE3;
+    box-shadow: 3px 3px 14px rgba(23, 93, 227, 0.25);
+}
+
+@media (max-width: 992px) {
+    .mainContactSection {
+        flex-direction: column-reverse;
+    }
+    .cardsRow {
+        flex-direction: column;
+    }
+    .socialFooter {
+        flex-direction: column-reverse;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.sectionNeedd {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px 30px 40px 0px;
+font-family: 'estedad', sans-serif;
+font-size: 16px;
+font-weight: 400;
+}
+
+.sectionNeedd__RightContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 1;
+  max-width: 650px;
+}
+
+.sectionNeedd__Right {
+  width: 100%;
+}
+
+.sectionNeed__RightText {
+  color: #545658;
+}
+
+.featuresBox {
+  background-color: #FFFAFA;
+  border: 1.5px solid #D9D9D9;
+  border-radius: 24px;
+  padding: 35px;
+  max-width: 617px;
+  width: 100%;
+  align-self:center;
+}
+
+.circleContainer {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+  justify-content: center;
+}
+
+.circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.purple { background-color: #b572e8; }
+.darkBlue { background-color: #2c3e9e; }
+.lightBlue { background-color: #7ddbf5; }
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.featureItem {
+  background-color: #FFFAFA;
+  border: 1.5px solid #D9D9D9;
+  border-radius: 16px;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+  color: #545658;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.featureItem:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.sectionNeedd__Leftt {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -90px;
+}
+
+
+@media (max-width: 992px) {
+  .sectionNeedd {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .sectionNeedd__RightContainer {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .featuresBox {
+    align-self: center;
+    width: 100%;
+  }
+}

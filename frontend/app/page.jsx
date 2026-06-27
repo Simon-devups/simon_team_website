@@ -51,19 +51,17 @@ export default function Home() {
                    کــسب و کــار شــما چه <span style={{ color: '#175DE3' }}>نـــیازی بــه سایـــت</span> دارد ؟
               </p>
               </HilightedTitle>
-  
-  <Image 
-    src={arrow} 
-    alt="arrow" 
-    style={{ 
-      position: 'absolute',
-      top: '45px',    
-      right: '405px',  
-      zIndex: -1,    
-      width: '53.35px',   
-      height: '30.44px' 
-    }}
-  />
+              <Image 
+              src={arrow} 
+              style={{  
+                position: 'absolute', 
+                top: '45px',       
+                right: '405px',       
+                zIndex: 3,         
+                width: '53.35px',        
+                height: '30.44px' 
+              }}
+              />
 </div>
     <p 
       style={{
