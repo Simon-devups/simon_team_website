@@ -1,4 +1,4 @@
-import styles from "./portfolioPage.module.css"
+import styles from "../styles/portfolioPage.module.css"
 import { CardTriangle } from "../Components/CardTriangle"
 
 const arr = Array.from({length: 16} , (__,i) => i+1);

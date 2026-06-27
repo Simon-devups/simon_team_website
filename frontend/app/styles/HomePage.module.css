@@ -1,3 +1,15 @@
+.mainCont{
+    display: flex;
+    justify-content: center;align-items: center;
+    background-image: url(../../public/mainCont.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw !important;
+    margin: 2rem auto;
+    z-index: 10;
+    /* margin: 4rem; */
+}
 .first_svgCont {
     width: 100%;
     max-width: 1080px;
@@ -303,6 +315,16 @@
     }
     .simonIntroduceSection__p{
         font-size: 0.5rem;
+    }
+
+    .mainCont{
+        background-size: contain;
+        background-position: middle;
+        height: 300px !important;
+    }
+    .mainTitle, .mainCont > *{
+        text-wrap: nowrap;
+        font-size: 10px !important;
     }
 }
 
