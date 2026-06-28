@@ -108,7 +108,11 @@ p {
   z-index: 0;
   background-color: #175DE3;
 }
-
+@media (max-width: 800px){
+  .leftSVG{
+    height: 100% !important;
+  }
+}
 @media (max-width: 1330px) {
   .BlueSquare {
     right: unset;
