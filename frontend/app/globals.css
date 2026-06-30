@@ -67,6 +67,22 @@ p {
 .goUp:hover{
   transform: translateY(-10px);
 }
+.float{
+  animation: floating 4s ease infinite forwards alternate;
+}
+.blink{
+  animation: blinking 2.5s ease-in-out infinite forwards alternate;
+}
+
+@keyframes floating {
+  0%{transform: translate(0,0) rotate(0);}
+  100%{transform: translate(-10px , 30px) rotate(20deg);}
+}
+@keyframes blinking {
+  0%{opacity: .4;}
+  50%{opacity: .4;}
+  100%{opacity: 0;}
+}
 
 
 .middleAbsolute {
@@ -108,16 +124,24 @@ p {
   z-index: 0;
   background-color: #175DE3;
 }
-@media (max-width: 800px){
-  .leftSVG{
-    height: 100% !important;
-  }
-}
 @media (max-width: 1330px) {
   .BlueSquare {
     right: unset;
     left: 80%;
     transform: unset;
     transform: translateX(-50%);
+  }
+}
+@media (max-width: 800px){
+  .leftSVG{
+    height: 100% !important;
+  }
+}
+@media (max-width: 500px){
+  html{ 
+    font-size: 70% !important;
+  }
+  html *{
+    font-size: inherit;
   }
 }
