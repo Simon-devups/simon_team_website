@@ -29,7 +29,7 @@ interface UpdatePortfolioParams {
 export class PortfolioService {
     constructor(private readonly prismaService: PrismaService) { }
 
-    async getPortfolios(): Promise<PortfoliosResponseDto[]> {
+    async getPortfolios(page?:number): Promise<PortfoliosResponseDto[]> {
         const portfolios = await this.prismaService.portfolio.findMany({
             select: {
                 id: true,
@@ -44,8 +44,10 @@ export class PortfolioService {
                     select: { url: true },
                     take: 1
                 }
-            }
-        })
+            },
+            skip:(page ? page : 1)*12,
+            take:10
+        });
 
         if (!portfolios) throw new NotFoundException;
 

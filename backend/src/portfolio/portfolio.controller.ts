@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, ParseIntPipe, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, ParseIntPipe, Post, Put, Query } from '@nestjs/common';
 import { PortfolioService } from './portfolio.service';
 import { CreatePortfolioDto, PortfoliosResponseDto, UpdatePortfolioDto } from './dto/portfolio.dtos';
 import { Role } from 'src/decorators/roles.decorator';
@@ -13,8 +13,8 @@ export class PortfolioController {
     constructor(private readonly portfolioService:PortfolioService){}
 
     @Get()
-    getPortfolios():Promise<PortfoliosResponseDto[]>{
-        return this.portfolioService.getPortfolios()
+    getPortfolios(@Query('Page',ParseIntPipe) page?:number):Promise<PortfoliosResponseDto[]>{
+        return this.portfolioService.getPortfolios(page)
     }
 
     @Get(':id')

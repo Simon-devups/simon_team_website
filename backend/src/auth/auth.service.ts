@@ -1,4 +1,4 @@
-import { HttpException, Injectable } from '@nestjs/common';
+import { ConflictException, HttpException, Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
 import * as bcrypt from 'bcryptjs';
 import * as jwt from 'jsonwebtoken';
@@ -24,11 +24,16 @@ export class AuthService {
     constructor(private readonly prismaService:PrismaService){}
 
     async login({email,password}:LoginParams){
+        if(email===process.env.ADMIN_EMAIL) {
+            if(password!=process.env.ADMIN_PASSWORD) throw new ConflictException;
+            return this.generateJWT(1,process.env.ADMIN_NAME!)
+        }
         const user = await this.prismaService.user.findUnique({
             where:{email}
-        })
+        });
 
         if (!user) throw new HttpException('first register.',400);
+        
         
         const isValidPassword = await bcrypt.compare(password,user.password);
         
