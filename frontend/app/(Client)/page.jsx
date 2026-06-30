@@ -6,12 +6,12 @@ import OrangeTriangle from "./Components/OrangeTriangle";
 import ProcessSteps from "./Components/webdesign-steps";
 import ConsultationForm from "./Components/requestform";
 import HilightedTitle from "./Components/HilightedTitle"
-import Line2 from '../public/Line 2.svg'
-import Line1 from '../public/Line 1.svg'
-import arrow from '../public/arrow.svg'
-import orangeArrow from '../public/OrangeArrow.svg'
-import simon from '../public/simon.svg'
-import BlueCrosses from '../public/Crosses.svg'
+import Line2 from '../../public/Line 2.svg'
+import Line1 from '../../public/Line 1.svg'
+import arrow from '../../public/arrow.svg'
+import orangeArrow from '../../public/OrangeArrow.svg'
+import simon from '../../public/simon.svg'
+import BlueCrosses from '../../public/Crosses.svg'
 
 import GradientTitle from "./Components/GradientTitle";
 import { CardTriangle } from "./Components/CardTriangle";
