@@ -642,10 +642,15 @@ font-weight: 400;
 }
 
 /* min width: */
+@media (min-width: 1860px){
+    .mainCont{
+        height: 750px !important;
+    }
+}
 @media (min-width: 1430px) {
     .mainCont{
-        background-size: cover;
-        height: 650px !important;
+        background-size: 100%;
+        height: 80vh !important;
     }
 }
 

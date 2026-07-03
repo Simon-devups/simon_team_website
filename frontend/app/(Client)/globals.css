@@ -24,6 +24,8 @@
 
 html {
   height: 100%;
+  scrollbar-color: #175DE3 transparent;
+  scrollbar-width:  thin;
 }
 
 
@@ -33,7 +35,6 @@ body {
   background-color: #FFFAFA;
   font-family: 'koolak';
   font-size: 16px;
-
 }
 
 body {

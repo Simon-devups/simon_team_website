@@ -4,7 +4,7 @@
     min-height: 550px;
     overflow: hidden;
     width: 100%;
-    min-height: 800px;
+    min-height: 490px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,9 +16,9 @@
     position: absolute;
     z-index: -1;
     inset: 0;
-    left: -500;
-    background-image: url(/FooterForMobile.svg);
-    background-size: 110%;
+    scale: 1.12;
+    background-image: url(/Footer.svg);
+    background-size: cover;
     background-repeat: no-repeat;
     /* background-position-y: bottom; */
     
@@ -87,7 +87,25 @@
     font-weight: 700;
     margin-bottom: .5rem;
 }
-
+@media (max-width: 1300px){
+    .cont::before{
+        background-size: 100%;
+        background-position: bottom;
+    }
+}
+@media (max-width: 1100px){
+    .cont::before{
+      background-image: url(/FooterForMobile.svg);
+      background-position-x: -20px;
+      /* background-size: 90%; */
+      bottom: -40%;
+    }
+}
+@media (max-width: 900px){
+    .cont::before{
+        bottom: -110px;
+    }
+}
 @media (max-width: 800px){
     .cont{
         flex-direction: column-reverse;
