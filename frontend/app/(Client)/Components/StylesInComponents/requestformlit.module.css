@@ -12,7 +12,6 @@
   position: relative; 
   overflow: hidden; 
   margin-top: -20px;
-  margin-left: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,5 +134,149 @@
 
 .submitBtn:hover {
   transform: translateY(-2px);
+}
+
+
+@media (max-width: 900px) {
+
+.consultationContainer {
+  background: #175DE3;
+  width: 100%;
+  max-width: 372px;
+  height: 610px;
+  border-radius: 35px 35px 85px 85px;
+  padding: 30px 50px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 15px 35px rgba(18, 73, 202, 0.2);
+  position: relative; 
+  overflow: hidden; 
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bgShape {
+  position: absolute;
+  pointer-events: none; 
+  z-index: 1; 
+}
+
+.patternRightTop {
+  display: none;
+  top: 15%;
+  right: 40px;
+  width: 330px;
+  height: auto;
+}
+.patternLeftBottom {
+  bottom: 11%;
+  left: -30px;
+  width: 430px;
+  height: auto;
+}
+
+.arrowGraphic {
+  position: absolute;
+  top: 72px;
+  left: 15%; 
+  width: 30px;
+  z-index: 2;
+}
+
+.formTitle, .formSubtitle, .consultationForm {
+  position: relative;
+  z-index: 3; 
+}
+
+.formTitle {
+  font-family: 'koolak', sans-serif;
+  font-size: 30px;
+  color: #FFBA3B; 
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.formSubtitle {
+  font-family: 'estedad', sans-serif;
+  text-align: justify;
+  line-height: 1.8;
+  font-weight: 400;
+  font-size: 16px;
+  color: #FFFAFA;
+  margin-bottom: 20px;
+}
+
+.consultationForm {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  width: 100%;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 993px;
+  height: 147px;
+  gap: 17px;
+  margin: 0 auto;
+}
+
+.inputGroup input {
+  flex: 1;
+}
+
+.consultationForm input[type="text"],
+.consultationForm input[type="tel"],
+.consultationForm textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #FFFAFA;
+  font-size: 14px;
+  color: #545658;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-family: 'estedad', sans-serif;
+  font-weight: 400;
+
+}
+
+.consultationForm input::placeholder,
+.consultationForm textarea::placeholder {
+  text-align: right;
+}
+
+.consultationForm textarea {
+  resize: none;
+  height: 118px;
+  width: 100%;
+  max-width: 993px;
+  margin: 0 auto;
+}
+
+.submitBtn {
+  background-color: #FFBA3B;
+  color: #FFFAFA;
+  font-family: 'koolak', sans-serif;
+  border: none;
+  width: 272px;
+  height: 58px;
+  font-size: 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  align-self: center;
+  transition: all 0.2s ease;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+}
+
 }
 

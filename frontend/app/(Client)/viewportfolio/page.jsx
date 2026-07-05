@@ -6,13 +6,16 @@ import HilightedTitle from "../Components/HilightedTitle"
 import ConsultationForm from "../Components/requestform";
 import ConsultationFormlit from "../Components/requestformlit";
 import ConsultationBanner from "../Components/banner"
-import arrow from '../../public/arrow.svg'
+import arrow from '../../../public/arrow.svg'
+import GradientTitlefirst from "../Components/GradientTitlefirst"
+
 
 
 
 export default function Home() {
   return (
     <>
+      <GradientTitlefirst/>
     <div className={styles.pageContainer}>     
       <section className={styles.sectionNeedd}>        
       
@@ -26,27 +29,16 @@ export default function Home() {
               bottomSvgOffset={'-12px'}     
               bottomSvgRightOffset={'0px'}
             >
-              <p style={{ 
-                fontSize: '30px',
-                color: '#FFBA3B', 
-                fontFamily: 'koolak', 
-                textAlign: 'right', 
-                marginRight: '-28px',
-                marginBottom: '10px'
-              }}>
+              <p               
+              className={styles.pone}
+>
                 کــسب و کــار شــما چه <span style={{ color: '#175DE3' }}>نـــیازی بــه سایـــت</span> دارد ؟
               </p>
             </HilightedTitle>
               <Image 
               src={arrow}              
-              style={{  
-              position: 'absolute',               
-              top: '45px',                                  
-              right: '405px',       
-              zIndex: 3,         
-              width: '53.35px',        
-              height: '30.44px' 
-                    }}
+              className={styles.arrowIcon}
+
               />            
           </div>
           
