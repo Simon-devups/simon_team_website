@@ -6,7 +6,7 @@ import HilightedTitle from "../Components/HilightedTitle"
 import ConsultationForm from "../Components/requestform";
 import ConsultationFormlit from "../Components/requestformlit";
 import ConsultationBanner from "../Components/banner"
-import arrow from '../../public/arrow.svg'
+import arrow from '../../../public/arrow.svg'
 
 
 

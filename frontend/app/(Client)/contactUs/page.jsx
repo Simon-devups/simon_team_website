@@ -4,7 +4,7 @@ import "../globals.css"
 import styles from "../styles/HomePage.module.css"
 import HilightedTitle from "../Components/HilightedTitle"
 import ConsultationForm from "../Components/requestform";
-import arrow from '../../public/arrow.svg'
+import arrow from '../../../public/arrow.svg'
 
 
 

@@ -1,4 +1,6 @@
 import styles from './StylesInComponents/CardTriangle.module.css'
+import Link from 'next/link'
+
 export const CardTriangle = () => {
     return (
         <div className={styles.product__card}>
@@ -12,7 +14,7 @@ export const CardTriangle = () => {
                     <div className={styles.card__body} >
                         <h3>وبسایت فروشگاهی بهروز</h3>
                         <p className={styles.card__p}>سایت، ویترین همیشگی کسب‌وکار شماست؛ جایی که مشتری بدون نیاز به تماس، شما را پیدا می‌کند، باور می‌کند و می‌ماند. سایت یعنی اعتبار، دسترسی ۲۴ ساعته و فروشی بدون مرز جغرافیایی. </p>
-                        <span className={styles.card__cta} dir='ltr'> &larr; مشاهده جزئیات</span>
+                        <Link href={"/viewportfolio"} className={styles.card__cta} dir='ltr'> &larr; مشاهده جزئیات</Link>
                     </div>
                 </div>
 

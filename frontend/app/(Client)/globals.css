@@ -26,6 +26,8 @@ html {
   height: 100%;
   scrollbar-color: #175DE3 transparent;
   scrollbar-width:  thin;
+  /* قسمت مهم در ریسپانسیو: */
+  overflow-x: hidden;
 }
 
 
@@ -62,6 +64,55 @@ p {
   font-family: 'estedad';
 }
 
+/* loader */
+.loadingCont{
+  /* background-color: white; */
+  position: relative;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  scale: 1.5;
+}
+.loader-3{
+  width : 48px;
+  height: 48px;
+  border: 3px solid #175DE3;
+  border-radius: 50%;
+  position: relative;
+  animation: rotation 1s linear infinite;
+}
+.loader-3::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+  width:  48px;
+  height:  48px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-bottom-color: #FEB020;
+}
+@keyframes rotation {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(360deg) }
+}
+
+/* 404 */
+.goHome{
+  color: #fff;
+  cursor: pointer;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 /* انیمیشن ها */
 .goUp{ transition: transform 0.2s ease-in-out }
