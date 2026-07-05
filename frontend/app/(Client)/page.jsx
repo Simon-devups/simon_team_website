@@ -16,10 +16,10 @@ import BlueCrosses from '../../public/Crosses.svg'
 import GradientTitle from "./Components/GradientTitle";
 import { CardTriangle } from "./Components/CardTriangle";
 
-export default async function Home() {
-  const response = await fetch('http://localhost:3000/portfolio', { cache: 'no-store' });
-  const data = await response.json();
-  console.log(data);
+export default function Home() {
+  // const response = await fetch('http://localhost:3000/portfolio', { cache: 'no-store' });
+  // const data = await response.json();
+  // console.log(data);
 
   return (
     <div style={{ overflow: 'hidden', position: 'relative', display: 'flex', flexDirection: 'column' }}>
