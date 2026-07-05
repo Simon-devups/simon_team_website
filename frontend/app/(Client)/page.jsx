@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 import Image from "next/image";
 import "./globals.css"
 import styles from "./styles/HomePage.module.css"
@@ -16,7 +16,11 @@ import BlueCrosses from '../../public/Crosses.svg'
 import GradientTitle from "./Components/GradientTitle";
 import { CardTriangle } from "./Components/CardTriangle";
 
-export default function Home() {
+export default async function Home() {
+  const response = await fetch('http://localhost:3000/portfolio', { cache: 'no-store' });
+  const data = await response.json();
+  console.log(data);
+
   return (
     <div style={{ overflow: 'hidden', position: 'relative', display: 'flex', flexDirection: 'column' }}>
       <div className={styles.mainCont} style={{ position: 'relative', height: '500px', width: '100%', display: "flex", flexDirection: "column" }}>
