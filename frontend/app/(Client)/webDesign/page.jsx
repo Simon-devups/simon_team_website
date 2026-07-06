@@ -8,7 +8,7 @@ import ConsultationForm from "../Components/requestform"
 
 const page = () => {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <div style={{ display: 'flex', flexDirection: 'column' , marginTop: 'calc(20vh - 4%)'}}>
             <section style={{ padding: ' 0px 30px', marginTop: '0' }} className={styles.sectionNeed}>
                 <div className={styles.sectionNeed__Right}>
                     <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '100%' }}>
@@ -155,7 +155,7 @@ const page = () => {
                 </div>
             </section>
 
-            <section style={{ display: 'flex', flexDirection: 'column' , marginTop: '80px'}}>
+            <section style={{ display: 'flex', flexDirection: 'column', marginTop: '80px' }}>
                 <GradientTitle text1="Website design steps" text2="مراحل طراحی سایت" />
 
                 <ProcessSteps />

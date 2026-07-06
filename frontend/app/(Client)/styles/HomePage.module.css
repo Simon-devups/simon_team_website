@@ -8,7 +8,6 @@
     width: 100vw !important;
     margin: 2rem auto;
     z-index: 10;
-    /* margin: 4rem; */
 }
 
 .first_svgCont {
@@ -33,6 +32,14 @@
 }
 
 .sectionNeed {
+    margin-top: 90px;
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sectionNeeddd {
     margin-top: 100px;
     width: 100%;
     padding: 0 1rem;
@@ -46,7 +53,10 @@
     flex-direction: column;
 
 }
-
+.sectionNeedd__Right {
+    display: flex;
+    flex-direction: column;
+}
 .sectionNeed__RightText {
     font-family: 'estedad';
     font-weight: 500;
@@ -54,7 +64,9 @@
     max-width: 600px;
     color: #545658;
 }
-
+/* .simonIntroduceSection {
+    position: relative;
+} */
 .simonIntroduceSection {
     direction: ltr;
 }
@@ -321,6 +333,11 @@
         width: 100%;
     }
 }
+@media (max-width: 770px){
+    .needingSection__bottomLeft{
+        width: 400px;
+    }
+}
 @media (max-width: 700px) {
     .needingSection__topLeft{
     clip-path: path("M15,0H235A15,15 0,0,1 250,15V185A15,15 0,0,1 235,200H70A10,10 0,0,1 60,190V170A10,10 0,0,0 50,160H10A10,10 0,0,1 0,150V15A15,15 0,0,1 15,0Z");
@@ -417,7 +434,7 @@
     gap: 0px;
     width: 100%;
     max-width: 1500px;
-    padding: 0 30px;
+    padding: 0 35px;
 }
 
 .contactLeftMap {
@@ -446,7 +463,7 @@
 .contactBox {
     display: flex;
     flex: 1;
-    height: 119px;
+    height: 110px;
     background: #FFFAFA;
     border: 1px solid #EAE9F3;
     border-radius: 37px;
@@ -461,20 +478,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 4px;
+    gap: 2px;
     background-color: #FFFAFA;
 }
 
 .phoneNum {
     font-family: 'estedad', sans-serif;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 400;
     color: #545658;
 }
 
 .phoneTxt {
     font-family: 'estedad', sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
     color: #175DE3;
 }
@@ -532,19 +549,7 @@
     box-shadow: 3px 3px 14px rgba(23, 93, 227, 0.25);
 }
 
-@media (max-width: 992px) {
-    .mainContactSection {
-        flex-direction: column-reverse;
-    }
-    .cardsRow {
-        flex-direction: column;
-    }
-    .socialFooter {
-        flex-direction: column-reverse;
-        gap: 20px;
-        text-align: center;
-    }
-}
+
 
 
 
@@ -654,8 +659,7 @@ font-weight: 400;
     }
 }
 
-/* max width: */
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
   .sectionNeedd {
     flex-direction: column-reverse;
     align-items: center;
@@ -671,10 +675,519 @@ font-weight: 400;
     align-self: center;
     width: 100%;
   }
-}
+} */
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
     .commentSection{
         gap: 30px;
     }
+} */
+ /* ریسپانسیو برای نمایشگرهای کوچک و موبایل */
+@media (max-width: 992px) {
+  .sectionNeedd {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 40px;
+  }
+  .sectionNeeddd {
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    margin-bottom: 40px;
+  }  
+  
+  .sectionNeedd__RightContainer {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .featuresBox {
+    align-self: center;
+    width: 100%;
+  }
 }
+
+
+/* ============================================ */
+/* ===== بخش ریسپانسیو ===== */
+/* ============================================ */
+
+@media screen and (max-width: 1330px) {
+    .servicesSection__threeCont {
+        max-width: 380px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .mainContactSection {
+        padding: 0 50px;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .servicesSection {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+    }
+    
+    .servicesSection__threeCont {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        min-height: 320px;
+        padding: 2rem;
+        flex: unset;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .mainContactSection {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+        gap: 40px;
+    }
+    
+    .contactLeftMap {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        order: 2;
+    }
+    
+  
+    
+    .contactRightContent {
+        width: 100%;
+        align-items: center;
+        order: 1;
+    }
+    
+    .cardsRow {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .socialFooter {
+        flex-direction: column-reverse;
+        gap: 20px;
+        text-align: center;
+        height: auto;
+        padding: 25px 30px;
+        width: calc(100% - 40px);
+        margin: 20px 20px 0 20px;
+    }
+    
+    .needingSection_firstDiv {
+        flex-direction: column;
+        width: 95%;
+        align-items: center;
+    }
+    
+    .sectionNeedd {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 40px;
+        padding: 0 20px 40px 20px;
+    }
+    
+    .sectionNeedd__RightContainer {
+        max-width: 100%;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .sectionNeedd__Leftt {
+        margin-top: 0;
+        width: 100%;
+    }
+    
+    .sectionNeedd__Leftt img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    
+    .cardsContainer {
+        margin-left: 0;
+        padding: 20px 1rem;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .offsetColumn {
+        transform: translateY(40px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pageContainer {
+        padding: 20px 0;
+    }
+    
+    .needingSection {
+        padding: 1rem;
+    }
+    
+    .needingSection__right {
+        flex: unset;
+        width: 100%;
+        min-height: 300px;
+        padding: 1.5rem;
+    }
+    
+    .needingSection__right h3 {
+        font-size: 1.6rem;
+    }
+    
+    .needingSection__right p {
+        font-size: 1rem;
+    }
+    
+    .needingSection__topLeft {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 2 / 1;
+        clip-path: none;
+        border-radius: 20px;
+    }
+    
+    .commentSection {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    /* .mainContactSection {
+        padding: 0 10px;
+        gap: 30px;
+    }
+    
+    .contactBox {
+        max-width: 100%;
+        width: 100%;
+        height: 90px;
+    }
+    
+    .contactBox__Right {
+        width: 70px;
+    }
+    
+    .contactBox__Right img {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    
+    .phoneNum {
+        font-size: 16px;
+    }
+    
+    .phoneTxt {
+        font-size: 13px;
+    }
+    
+    .socialFooter {
+        padding: 20px 15px;
+        width: calc(100% - 30px);
+        margin: 20px 15px 0 15px;
+        border-radius: 25px;
+    }
+    
+    .socialText {
+        font-size: 14px;
+    }
+    
+    .socialIconsGroup {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .socialBtn {
+        width: 45px;
+        height: 45px;
+    } */
+    
+    /* .socialBtn img {
+        width: 20px !important;
+        height: 20px !important;
+    } */
+    
+    .needingSection__SquareCont {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .needingSection__Squares {
+        width: 100%;
+        max-width: 300px;
+        height: 150px;
+    }
+    
+    .commentSection__figure {
+        flex: unset;
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .commentSection__userName {
+        font-size: 1.4rem;
+    }
+    
+    .commentSection__comment {
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+    
+    .sectionNeedd {
+        padding: 0 10px 30px 10px;
+        gap: 30px;
+    }
+    
+    .featuresBox {
+        padding: 20px 15px;
+        border-radius: 18px;
+    }
+    
+    .circleContainer {
+        gap: 8px;
+        margin-bottom: 18px;
+    }
+    
+    .circle {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .featuresGrid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .featureItem {
+        padding: 10px;
+        font-size: 13px;
+        border-radius: 12px;
+    }
+      
+
+}
+
+
+
+
+
+/* استایل پیش‌فرض arrow */
+.arrowIcon {
+    position: absolute;
+    top: 45px;
+    right: 405px;
+    z-index: 3;
+    width: 53.35px;
+    height: 30.44px;
+}
+
+/* استایل arrow در موبایل */
+@media (max-width: 576px) {
+    .arrowIcon {
+        top: 70px !important;
+        right: 320px !important;
+        width: 30px !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width: 576px) {
+.cardsRow {
+    gap: 20px;
+    width: 100%;
+    margin-top: 15px;
+    height: 210px;
+}
+.contactBox {
+    border-radius: 25px;
+    width: 100%;
+    max-width: 372px;
+}
+
+.phoneNum {
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.phoneTxt {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+    .socialFooter {
+        padding: 20px 15px;
+        width: calc(100% - 30px);
+        margin: 20px 15px 0 15px;
+        border-radius: 25px;
+    }
+    
+    .socialText {
+        font-size: 14px;
+    }
+    
+    .socialIconsGroup {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .socialBtn {
+        width: 45px;
+        height: 45px;
+    }
+    
+
+}
+
+.imgthree{           
+    position: absolute;           
+    top: -45px;   /* تنظیم عمودی */          
+    left: 38%;    /* تنظیم افقی */          
+    z-Index: -1;          
+    pointer-events: none;
+       }
+.imgfour{       
+    position: absolute;       
+    top: -315px;   /* تنظیم عمودی */       
+    left: 10%;     /* تنظیم افقی */       
+    z-Index: -1;        
+    pointer-Events: none;    
+}  
+.imgsix{              
+    position: absolute;           
+    top: -240px;   /* تنظیم عمودی */          
+    left: 40%;     /* تنظیم افقی */          
+    z-Index: -1;          
+    pointer-Events: none;
+}
+.pone{                    
+    font-Size: 30px;                    
+    color: #FFBA3B;              
+    font-Family: koolak;              
+    text-Align: center;              
+    margin-Right: -28px;              
+    margin-Bottom: 10px
+}    
+
+@media (max-width: 576px) {
+    .sectionNeed {
+        flex-direction: column;
+        padding: 0 1rem;
+        gap: 25px;
+        margin-top:50 ;
+    }
+
+    /* متن همیشه اول */
+    .sectionNeed__Right {
+        order: 1;
+        width: 372px;
+    }
+    .sectionNeedd__Right {
+        order: 2;
+        width: 372px;
+    }    
+
+    /* تصاویر/کارت‌ها همیشه بعد از متن */
+    .sectionNeed__Left {
+        order: 2;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sectionNeed__RightText {
+        width: 100% !important;
+        line-height: 35px;
+        font-size: 15px !important;
+        margin-top: 20px;
+    }
+    .pone{                    
+        font-Size: 27px;                    
+        color: #FFBA3B;              
+        font-Family: koolak;              
+        text-Align: right;              
+        margin-Right: -28px;              
+        margin-Bottom: 10px
+    }   
+
+    .imgone{
+        width: 372px;
+        height: auto;
+    }
+    .imgfive{
+        width: 372px;
+        height: auto;
+        order: 3;
+    }    
+    .imgtwo{
+        display: none;
+        width: 388px;
+        height: auto;
+        margin-left: 27px;
+    }
+    .imgthree{
+        width: 350px;
+        height: auto;
+        position: absolute;
+        top: 30px;   /* تنظیم عمودی */
+        left: 9%;    /* تنظیم افقی */
+        z-Index: -1;
+        pointer-events: none;
+    }
+    .imgfour{
+        width: 360px;
+        height: auto;
+    position: absolute;       
+    top: -150px;   /* تنظیم عمودی */       
+    left: 7%;     /* تنظیم افقی */       
+    z-Index: -1;        
+    pointer-Events: none;   
+    } 
+.imgsix{ 
+    width: 355px;
+    height: auto;                 
+    position: absolute;           
+    top: -220px;   /* تنظیم عمودی */          
+    left: 7%;     /* تنظیم افقی */          
+    z-Index: -1;          
+    pointer-Events: none;
+}       
+.cardsContainer {
+  gap: 20px;       
+  padding: 40px 0;
+}
+
+.bgPatternWrapper {
+  top: 60%;
+  width: 230px; 
+}
+
+.cardColumn {
+  gap: 20px; 
+  z-index: 2; 
+}
+
+.offsetColumn {
+  transform: translateY(80px); 
+}
+
+.cardItem {
+  width: 165px;              
+  height: 205.7px;             
+
+}
+
+}
+

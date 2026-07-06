@@ -5,12 +5,15 @@ import styles from "../styles/HomePage.module.css"
 import HilightedTitle from "../Components/HilightedTitle"
 import ConsultationForm from "../Components/requestform";
 import arrow from '../../../public/arrow.svg'
+import GradientTitlefirst from "../Components/GradientTitlefirst"
+
 
 
 
 export default function Home() {
   return (
     <>
+    <GradientTitlefirst/>
     <div className={styles.pageContainer}>
       
       <section className={styles.mainContactSection}>
@@ -26,27 +29,15 @@ export default function Home() {
               bottomSvgOffset={'-12px'}    
               bottomSvgRightOffset={'0px'}
             >
-              <p style={{
-                fontSize: '30px',
-                color: '#FFBA3B',
-                fontFamily: 'koolak',
-                textAlign: 'right',
-                marginRight: '-28px',
-                marginBottom: '10px'
-              }}>
+              <p 
+              className={styles.pone}
+>
                 کــسب و کــار شــما چه <span style={{ color: '#175DE3' }}>نـــیازی بــه سایـــت</span> دارد ؟
               </p>
             </HilightedTitle>
               <Image 
-              src={arrow}              
-              style={{  
-              position: 'absolute',               
-              top: '45px',                                  
-              right: '405px',       
-              zIndex: 3,         
-              width: '53.35px',        
-              height: '30.44px' 
-                    }}
+              src={arrow}
+              className={styles.arrowIcon}             
               />            
           </div>
 
@@ -63,8 +54,8 @@ export default function Home() {
                 <Image 
                 src="/Group 94.svg" 
                 alt="موقعیت ما روی نقشه" 
-                width={49} 
-                height={50}
+                width={40} 
+                height={40.82}
                 />
               </div>
             </div>
@@ -77,8 +68,8 @@ export default function Home() {
               <div className={styles.contactBox__Right}>
                 <Image 
                 src="/Group 94.svg" 
-                width={49} 
-                height={50}
+                width={40} 
+                height={40.82}
                 />
               </div>
             </div>
@@ -87,12 +78,13 @@ export default function Home() {
         </div>
         <div className={styles.contactLeftMap}>
           <Image 
+            className={styles.imgone}
             src="/image 32.png" 
             alt="موقعیت ما روی نقشه" 
             width={569} 
             height={446}
             style={{
-                marginTop: '35px'
+                marginTop: '20px'
             }}
           />
         </div>        

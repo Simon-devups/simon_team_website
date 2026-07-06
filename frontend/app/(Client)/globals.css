@@ -21,6 +21,25 @@
   src: url("/fonts/Estedad-ExtraBold.ttf") format("truetype");
   font-weight: 600;
 }
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFAFA;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #175DE3;
+  border-radius: 15px 10px 10px 15px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #175DE3;
+}
 
 html {
   height: 100%;
