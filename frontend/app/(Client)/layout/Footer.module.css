@@ -17,7 +17,7 @@
     z-index: -1;
     inset: 0;
     left: -500;
-    background-image: url(../../public/FooterForMobile.svg);
+    background-image: url(/FooterForMobile.svg);
     background-size: 110%;
     background-repeat: no-repeat;
     /* background-position-y: bottom; */

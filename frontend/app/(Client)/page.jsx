@@ -6,12 +6,12 @@ import OrangeTriangle from "./Components/OrangeTriangle";
 import ProcessSteps from "./Components/webdesign-steps";
 import ConsultationForm from "./Components/requestform";
 import HilightedTitle from "./Components/HilightedTitle"
-import Line2 from '../public/Line 2.svg'
-import Line1 from '../public/Line 1.svg'
-import arrow from '../public/arrow.svg'
-import orangeArrow from '../public/OrangeArrow.svg'
-import simon from '../public/simon.svg'
-import BlueCrosses from '../public/Crosses.svg'
+import Line2 from '../../public/Line 2.svg'
+import Line1 from '../../public/Line 1.svg'
+import arrow from '../../public/arrow.svg'
+import orangeArrow from '../../public/OrangeArrow.svg'
+import simon from '../../public/simon.svg'
+import BlueCrosses from '../../public/Crosses.svg'
 
 import GradientTitle from "./Components/GradientTitle";
 import { CardTriangle } from "./Components/CardTriangle";
@@ -25,7 +25,7 @@ export default function Home() {
           <path d="M40 2.5H863.737C872.098 2.50005 880.22 5.2948 886.811 10.4395L1063.07 148.022C1072.18 155.129 1077.5 166.034 1077.5 177.583V381.5C1077.5 402.211 1060.71 419 1040 419H216.263C207.902 419 199.78 416.205 193.189 411.061L16.9258 273.478C7.82175 266.371 2.50001 255.466 2.5 243.917V40C2.5 19.2893 19.2893 2.5 40 2.5Z" fill="#FFFAFA" stroke="#175DE3" strokeWidth="5" />
         </svg>
         <OrangeTriangle text={'مشاوره رایگان'} /> */}
-        <h1 className={`middleAbsolute ${styles.mainTitle}`} style={{ color: '#175DE3', fontSize: '4rem', textAlign: 'center' }}>
+        <h1 className={`middleAbsolute ${styles.mainTitle}`} style={{ color: '#175DE3', fontSize: '4rem', textAlign: 'center' , textWrap: 'nowrap'}}>
           با  تیم     <HilightedTitle fontSize={'8rem'} color={'#FEB020'}>ســـــایــمـــون</HilightedTitle><br></br>
           کسب و کارت رو آنلاین کن
         </h1>
@@ -146,9 +146,9 @@ export default function Home() {
         <div dir="ltr" className={styles.simonIntroduceSection__SvgCont}>
 
           {/* برای زیبایی */}
-          <Image className={styles.simonIntroduceSection__FakeLogo} src={simon} alt="logo"></Image>
-          <Image style={{ transform: 'rotate(12deg)', top: 'unset', bottom: '-150px', left: 'unset', right: '250px' }} className={styles.simonIntroduceSection__FakeLogo} src={simon} alt="logo"></Image>
-          <Image style={{ transform: 'rotate(0deg)', top: '10px', bottom: 'unset', left: 'unset', right: '20px' }} className={styles.simonIntroduceSection__FakeLogo} src={BlueCrosses} alt="logo"></Image>
+          <Image className={`blink ${styles.simonIntroduceSection__FakeLogo}`} src={simon} alt="logo"></Image>
+          <Image style={{ transform: 'rotate(12deg)', top: 'unset', bottom: '-150px', left: 'unset', right: '250px' }} className={`blink ${styles.simonIntroduceSection__FakeLogo}`} src={simon} alt="logo"></Image>
+          <Image style={{ transform: 'rotate(0deg)', top: '10px', bottom: 'unset', left: 'unset', right: '20px' }} className={styles.simonIntroduceSection__FakeLogo} src={BlueCrosses} alt="vector"></Image>
 
           <Image className={styles.simonIntroduceSection__Logo} src={simon} alt="logo"></Image>
           <Image className={styles.simonIntroduceSection__orangeArrow} src={orangeArrow} alt="logo"></Image>
@@ -204,43 +204,47 @@ export default function Home() {
       </section>
 
       {/* شکل آبی بزرگ */}
-      <svg width="100%" height="530" viewBox="0 0 1416 530" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g filter="url(#filter0_d_0_1)">
-          <path d="M-28 80.1042C-28 80.1042 188.684 -19.0341 332 3.2685C470.207 24.776 549.115 116.421 690.5 116.538C833.045 116.656 888.793 70.9533 1031 63.8713C1171.26 56.8865 1412 116.538 1412 116.538V409.091C1412 409.091 1258.24 489.563 1091.5 499.273C966.983 506.525 849.298 457.024 724.5 461.036C579.504 465.697 477.14 499.384 332 499.273C186.295 499.162 -28 435.063 -28 435.063V80.1042Z" fill="url(#paint0_radial_0_1)" />
-        </g>
-        <path d="M892 63.9984C892 63.9984 991.133 33.3295 1056.48 36.2695C1117.72 39.0252 1200.6 50.4083 1200.6 50.4083" stroke="url(#paint1_radial_0_1)" strokeWidth="3" />
-        <path d="M418.726 518.71C418.726 518.71 321.255 529.871 256.133 523.752C195.093 518.017 101.469 493 101.469 493" stroke="url(#paint2_radial_0_1)" strokeWidth="3" />
-        <path d="M1241.73 500C1241.73 500 1146.78 524.685 1081.45 527.735C1020.2 530.594 924 518.919 924 518.919" stroke="url(#paint3_radial_0_1)" strokeWidth="3" />
-        <path d="M-29 80.1042C-29 80.1042 187.684 -19.0341 331 3.2685C469.207 24.776 548.115 116.421 689.5 116.538C832.045 116.656 887.793 70.9533 1030 63.8713C1170.26 56.8865 1411 116.538 1411 116.538V409.091C1411 409.091 1257.24 489.563 1090.5 499.273C965.983 506.525 848.298 457.024 723.5 461.036C578.504 465.697 476.14 499.384 331 499.273C185.295 499.162 -29 435.063 -29 435.063V80.1042Z" fill="#5A8EF0" fillOpacity="0.2" />
-        <defs>
-          <filter id="filter0_d_0_1" x="-32" y="0" width="1448" height="508" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-            <feFlood floodOpacity="0" result="BackgroundImageFix" />
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-            <feOffset dy="4" />
-            <feGaussianBlur stdDeviation="2" />
-            <feComposite in2="hardAlpha" operator="out" />
-            <feColorMatrix type="matrix" values="0 0 0 0 0.0901961 0 0 0 0 0.364706 0 0 0 0 0.890196 0 0 0 0.25 0" />
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1" />
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape" />
-          </filter>
-          <radialGradient id="paint0_radial_0_1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(692 286.726) rotate(90) scale(283.458 720)">
-            <stop stopColor="#5A8EF0" />
-            <stop offset="1" stopColor="#175DE3" />
-          </radialGradient>
-          <radialGradient id="paint1_radial_0_1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1050.27 62.5998) rotate(1.84154) scale(159.149 159.149)">
-            <stop stopColor="#175DE3" />
-            <stop offset="1" stopColor="#FFFAFA" />
-          </radialGradient>
-          <radialGradient id="paint2_radial_0_1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(260.34 502.865) rotate(-175.367) scale(159.149 159.148)">
-            <stop stopColor="#175DE3" />
-            <stop offset="1" stopColor="#FFFAFA" />
-          </radialGradient>
-          <radialGradient id="paint3_radial_0_1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1082.69 506.465) rotate(176.592) scale(159.149 159.148)">
-            <stop stopColor="#175DE3" />
-            <stop offset="1" stopColor="#FFFAFA" />
-          </radialGradient>
-        </defs>
-      </svg>
+      {/* xMidYMid slice را میتوان با
+      none جایگزین کرد */}
+      <section>
+        <svg style={{marginTop: '25px', overflow: 'visible'}} width="100%" height="580px" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1416 530" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g filter="url(#filter0_d_0_1)">
+            <path d="M-28 80.1042C-28 80.1042 188.684 -19.0341 332 3.2685C470.207 24.776 549.115 116.421 690.5 116.538C833.045 116.656 888.793 70.9533 1031 63.8713C1171.26 56.8865 1412 116.538 1412 116.538V409.091C1412 409.091 1258.24 489.563 1091.5 499.273C966.983 506.525 849.298 457.024 724.5 461.036C579.504 465.697 477.14 499.384 332 499.273C186.295 499.162 -28 435.063 -28 435.063V80.1042Z" fill="url(#paint0_radial_0_1)" />
+          </g>
+          <path d="M892 63.9984C892 63.9984 991.133 33.3295 1056.48 36.2695C1117.72 39.0252 1200.6 50.4083 1200.6 50.4083" stroke="url(#paint1_radial_0_1)" strokeWidth="3" />
+          <path d="M418.726 518.71C418.726 518.71 321.255 529.871 256.133 523.752C195.093 518.017 101.469 493 101.469 493" stroke="url(#paint2_radial_0_1)" strokeWidth="3" />
+          <path d="M1241.73 500C1241.73 500 1146.78 524.685 1081.45 527.735C1020.2 530.594 924 518.919 924 518.919" stroke="url(#paint3_radial_0_1)" strokeWidth="3" />
+          <path d="M-29 80.1042C-29 80.1042 187.684 -19.0341 331 3.2685C469.207 24.776 548.115 116.421 689.5 116.538C832.045 116.656 887.793 70.9533 1030 63.8713C1170.26 56.8865 1411 116.538 1411 116.538V409.091C1411 409.091 1257.24 489.563 1090.5 499.273C965.983 506.525 848.298 457.024 723.5 461.036C578.504 465.697 476.14 499.384 331 499.273C185.295 499.162 -29 435.063 -29 435.063V80.1042Z" fill="#5A8EF0" fillOpacity="0.2" />
+          <defs>
+            <filter id="filter0_d_0_1" x="-32" y="0" width="1448" height="508" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+              <feOffset dy="4" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix type="matrix" values="0 0 0 0 0.0901961 0 0 0 0 0.364706 0 0 0 0 0.890196 0 0 0 0.25 0" />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape" />
+            </filter>
+            <radialGradient id="paint0_radial_0_1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(692 286.726) rotate(90) scale(283.458 720)">
+              <stop stopColor="#5A8EF0" />
+              <stop offset="1" stopColor="#175DE3" />
+            </radialGradient>
+            <radialGradient id="paint1_radial_0_1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1050.27 62.5998) rotate(1.84154) scale(159.149 159.149)">
+              <stop stopColor="#175DE3" />
+              <stop offset="1" stopColor="#FFFAFA" />
+            </radialGradient>
+            <radialGradient id="paint2_radial_0_1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(260.34 502.865) rotate(-175.367) scale(159.149 159.148)">
+              <stop stopColor="#175DE3" />
+              <stop offset="1" stopColor="#FFFAFA" />
+            </radialGradient>
+            <radialGradient id="paint3_radial_0_1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1082.69 506.465) rotate(176.592) scale(159.149 159.148)">
+              <stop stopColor="#175DE3" />
+              <stop offset="1" stopColor="#FFFAFA" />
+            </radialGradient>
+          </defs>
+        </svg>
+      </section>
 
 
       <section className={styles.needingSection}>
