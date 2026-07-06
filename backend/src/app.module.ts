@@ -14,16 +14,16 @@ import { UserThrottlerGuard } from './guards/throttler.guard';
 
 @Module({
   imports: [PrismaModule, PortfolioModule, AuthModule, ConsultationModule,
-    // ThrottlerModule.forRoot([
-    //   { ttl: 60000,   // time period (ms)
-    //     limit: 10,    // 10 request per ttl },
-    // ]),
-    ThrottlerModule.forRootAsync({
-      useFactory: () => ({
-        throttlers: [{ ttl: 60000, limit: 10 }],
-        storage: new ThrottlerStorageRedisService('redis://localhost:6379'),
-      }),
-    })
+    ThrottlerModule.forRoot([
+      { ttl: 60000,   // time period (ms)
+        limit: 10,    // 10 request per ttl ,
+    }]),
+    // ThrottlerModule.forRootAsync({
+    //   useFactory: () => ({
+    //     throttlers: [{ ttl: 60000, limit: 10 }],
+    //     storage: new ThrottlerStorageRedisService('redis://localhost:6379'),
+    //   }),
+    // })
   ],
   controllers: [AppController],
   providers: [AppService,{
