@@ -3,6 +3,7 @@ import { DynaPuff } from "next/font/google";
 import "./globals.css";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,12 @@ export default function RootLayout({ children }) {
         `}
       >
         <Header />
+        <Toaster
+          position="bottom-right"
+          richColors toastOptions={{
+            className: 'estedad',
+          }}
+        />
         {children}
         <Footer />
       </body>
