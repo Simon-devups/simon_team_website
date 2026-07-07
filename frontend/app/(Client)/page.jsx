@@ -1,4 +1,3 @@
-// 'use client'
 import Image from "next/image";
 import "./globals.css"
 import styles from "./styles/HomePage.module.css"
@@ -16,13 +15,27 @@ import BlueCrosses from '../../public/Crosses.svg'
 import GradientTitle from "./Components/GradientTitle";
 import { CardTriangle } from "./Components/CardTriangle";
 
-export default function Home() {
-  // const response = await fetch('http://localhost:3000/portfolio', { cache: 'no-store' });
-  // const data = await response.json();
-  // console.log(data);
+export default async function Home() {
+  let data = [];
+  try {
+    const response = await fetch('http://localhost:3000/portfolio?Page=1', {
+      cache: 'no-store',
+      next: { revalidate: 0 }
+    });
+    if (response.ok) {
+      data = await response.json();
+      data = Array.isArray(data) ? data.slice(0, 3) : [];
+    } else {
+      console.error('API Error:', response.status);
+    }
+  } catch (error) {
+    console.error('Failed to fetch portfolio:', error);
+    data = [];
+  }
+  console.log('Portfolio data:', data);
 
   return (
-    <div style={{marginTop: '50px' , overflow: 'hidden', position: 'relative', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ marginTop: '50px', overflow: 'hidden', position: 'relative', display: 'flex', flexDirection: 'column' }}>
       <div className={styles.mainCont} style={{ position: 'relative', height: '500px', width: '100%', display: "flex", flexDirection: "column" }}>
 
         {/* <svg className={`middleAbsolute ${styles.first_svgCont}`} width="1080" height="422" viewBox="0 0 1080 422" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -201,11 +214,13 @@ export default function Home() {
       </section>
 
       <section className={styles.commentSection}>
-        <CardTriangle />
-        <CardTriangle />
-        <CardTriangle />
-
+        <CardTriangle id={data[0]?.id} />
+        <CardTriangle id={data[1]?.id} />
+        <CardTriangle id={data[2]?.id} />
       </section>
+      {data.map((itm) => {
+        return (<CardTriangle rawData={itm} />)
+      })}
 
       {/* شکل آبی بزرگ */}
       {/* xMidYMid slice را میتوان با

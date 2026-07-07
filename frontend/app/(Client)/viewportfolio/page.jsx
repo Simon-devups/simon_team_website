@@ -10,7 +10,7 @@ import arrow from '../../../public/arrow.svg'
 import GradientTitlefirst from "../Components/GradientTitlefirst"
 
 
-
+//این کامپوننت قراراست حذف شود و داینامیک نمیگیرد
 
 export default function Home() {
   return (

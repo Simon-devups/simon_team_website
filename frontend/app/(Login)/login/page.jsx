@@ -32,24 +32,32 @@ const page = () => {
                 headers: {
                     'Content-Type' : 'application/json'
                 },
+                credentials: 'include', // برای cookie/token
                 body: JSON.stringify({
-                    identifier: identifierValue,
+                    email: identifierValue,
                     password: data.password
                 })
             });
 
             const result = await res.json();
             if (res.ok){
+                // ذخیره token اگر بک‌اند بفرستد
+                if (result.token) {
+                    localStorage.setItem('token', result.token);
+                }
                 dispatch({
                     type: 'done'
                 });
                 router.replace('/admin');               
-            } else console.log(result.error || 'error appeared');
+            } else {
+                console.log(result.message || result.error || 'خطای ورود');
+                // نمایش پیام خطا به کاربر
+            }
             
         }
         catch(err) {
-            console.log(err);
-            throw new Error(err);
+            console.log('Login error:', err);
+            // نمایش پیام خطای اتصال
         }
     }
 
@@ -184,7 +192,7 @@ const page = () => {
                         {passwordErrors.password?.message ? "خطا در ورود" : "رمز عبور را خود را وارد کنید."}
                     </h1>
                     <p style={{ fontSize: '12px', color: '#3f4064', marginBottom: '16px', lineHeight: '2.17', fontWeight: '500' }}>
-                        {passwordErrors.password?.message ?  "لطفا پسورد [1234] را به درستی وارد کنید." : ""}
+                        {passwordErrors.password?.message ?  passwordErrors.password?.message : "رمز عبور خود را وارد کنید"}
                     </p>
 
                     <div>
@@ -192,11 +200,12 @@ const page = () => {
                             <div className={styles.divInput}>
                                 <div className={styles.grow}>
                                     <input
-                                        type="text"
+                                        type="password"
                                         {...registerPass("password", {
-                                            required: 'کد ارسالی را وارد کنید.',
-                                            validate: (value) => {
-                                                return (String(value) == "1234" || "لطفا رمز [1234] را به درستی وارد کنید.")
+                                            required: 'رمز عبور را وارد کنید.',
+                                            minLength: {
+                                                value: 6,
+                                                message: 'رمز عبور باید حداقل 6 کاراکتر باشد'
                                             }
                                         })}
                                     />

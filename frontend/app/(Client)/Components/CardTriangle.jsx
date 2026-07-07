@@ -1,7 +1,7 @@
 import styles from './StylesInComponents/CardTriangle.module.css'
 import Link from 'next/link'
 
-export const CardTriangle = () => {
+export const CardTriangle = ({rawData}) => {
     return (
         <div className={styles.product__card}>
             <div className={styles.card__shape}>
@@ -9,12 +9,12 @@ export const CardTriangle = () => {
 
                 <div className={styles.card__content}>
                     <div className={styles.card__media}>
-                        <img src="/tmp.png" alt="RFID and GPS tracker product photo" />
+                        <img src={rawData?.images[0].url ? rawData.images[0].url : "/tmp.png"} alt="RFID and GPS tracker product photo" />
                     </div>
                     <div className={styles.card__body} >
-                        <h3>وبسایت فروشگاهی بهروز</h3>
-                        <p className={styles.card__p}>سایت، ویترین همیشگی کسب‌وکار شماست؛ جایی که مشتری بدون نیاز به تماس، شما را پیدا می‌کند، باور می‌کند و می‌ماند. سایت یعنی اعتبار، دسترسی ۲۴ ساعته و فروشی بدون مرز جغرافیایی. </p>
-                        <Link href={"/viewportfolio"} className={styles.card__cta} dir='ltr'> &larr; مشاهده جزئیات</Link>
+                        <h3>{rawData?.title}</h3>
+                        <p className={styles.card__p}>{rawData?.description}</p>
+                        <Link href={`/viewportfolio/${rawData?.id}`} className={styles.card__cta} dir='ltr'> &larr; مشاهده جزئیات</Link>
                     </div>
                 </div>
 
