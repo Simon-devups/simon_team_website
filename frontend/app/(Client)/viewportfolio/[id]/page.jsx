@@ -10,7 +10,10 @@ import GradientTitlefirst from "../../Components/GradientTitlefirst"
 
 
 export default async function Home({ params }) {
-    const { id } = params || 6;
+    console.log(params);
+    
+    const { id } = await params;
+    console.log('this is id ' , id)
     // console.log(params.id)
     let data = null;
     try {
