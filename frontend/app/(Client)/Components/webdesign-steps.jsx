@@ -10,7 +10,7 @@ const ProcessSteps = () => {
             alignClass: styles.alignRight,
             bgClass: styles.bgVector2,
             title: 'ارسال درخواست',
-            desc: <>با ارسال درخواست، اولین قدم را برای راه‌اندازی سایت اختصاصی <br /> خود بردارید. تیم ما خیلی زود با شما تماس می‌گیرد.</>,
+            desc: <> با ثبت درخواست خود، اولین قدم را برای تحول دیجیتال کسب‌<br />وکارتان بردارید. </>,
             arrowSrc: '/Vector (5).svg',
             arrowClass: styles.pathSegment,
             arrowAlt: 'مسیر زرد ۱'
@@ -21,7 +21,7 @@ const ProcessSteps = () => {
             alignClass: styles.alignLeft,
             bgClass: styles.bgVector3,
             title: 'تماس کارشناسان',
-            desc: 'کارشناسان ما پس از دریافت درخواست، برای نیازهای شما تماس می‌گیرند تا بهترین پیشنهادات را برای طراحی سایت‌تان ارائه کنند.',
+            desc: 'کارشناسان باتجربه‌ی ما با شما تماس می‌گیرند تا نیازها را دقیق بشنوند.',
             arrowSrc: '/مسیر-2 3.svg',
             arrowClass: styles.pathSegment2,
             arrowAlt: 'مسیر زرد ۲'
@@ -31,8 +31,8 @@ const ProcessSteps = () => {
             rowClass: styles.row3,
             alignClass: styles.alignRight,
             bgClass: styles.bgVector4,
-            title: 'انجام بررسی‌های فنی',
-            desc: 'تیم فنی آرکوب با بررسی همه‌جانبه اطلاعات، اطمینان می‌یابد که سایت شما بهینه، سریع و کاملاً سازگار با نیازهایتان باشد.',
+            title: 'تحلیل و بررسی نیازها',
+            desc: <>شناخت عمیق اهداف، مخاطبان و چالش‌های کسب‌وکار برای<br /> طراحی هوشمندانه‌ترین راهکار.</>,
             arrowSrc: '/مسیر-3 3.svg',
             arrowClass: styles.pathSegment3,
             arrowAlt: 'مسیر زرد ۳'
@@ -42,8 +42,8 @@ const ProcessSteps = () => {
             rowClass: styles.row4,
             alignClass: styles.alignLeft,
             bgClass: styles.bgVector3,
-            title: 'تماس کارشناسان',
-            desc: 'کارشناسان ما پس از دریافت درخواست، برای نیازهای شما تماس می‌گیرند تا بهترین پیشنهادات را برای طراحی سایت‌تان ارائه کنند.',
+            title: 'طراحی تجربه و رابط کاربری',
+            desc: <>خلق ظاهری چشم‌نواز و مسیری روان در هماهنگی کامل با هویت<br /> برند شما.</>,
             arrowSrc: '/مسیر-4 3.svg',
             arrowClass: styles.pathSegment4,
             arrowAlt: 'مسیر زرد ۴'
@@ -53,8 +53,8 @@ const ProcessSteps = () => {
             rowClass: styles.row5,
             alignClass: styles.alignRight,
             bgClass: styles.bgVector4,
-            title: 'انجام بررسی‌های فنی',
-            desc: 'تیم فنی آرکوب با بررسی همه‌جانبه اطلاعات، اطمینان می‌یابد که سایت شما بهینه، سریع و کاملاً سازگار با نیازهایتان باشد.',
+            title: 'توسعه و کدنویسی',
+            desc: 'تبدیل طرح‌ها به کدهای تمیز، سریع و واکنش‌گرا با آخرین فناوری‌های روز.',
             arrowSrc: '/مسیر-5 3.svg',
             arrowClass: styles.pathSegment5,
             arrowAlt: 'مسیر زرد ۵'
@@ -64,8 +64,8 @@ const ProcessSteps = () => {
             rowClass: styles.row6,
             alignClass: styles.alignLeft,
             bgClass: styles.bgVector3,
-            title: 'تماس کارشناسان',
-            desc: 'کارشناسان ما پس از دریافت درخواست، برای نیازهای شما تماس می‌گیرند تا بهترین پیشنهادات را برای طراحی سایت‌تان ارائه کنند.',
+            title: ' تست و تضمین کیفیت',
+            desc: 'بررسی سرعت، امنیت و نمایش در دستگاه‌های مختلف و رفع کامل خطاها.',
             arrowSrc: '/مسیر-6 3.svg',
             arrowClass: styles.pathSegment6,
             arrowAlt: 'مسیر زرد ۶'
@@ -75,8 +75,8 @@ const ProcessSteps = () => {
             rowClass: '',
             alignClass: styles.alignRight,
             bgClass: styles.bgVector4,
-            title: 'انجام بررسی‌های فنی',
-            desc: 'تیم فنی آرکوب با بررسی همه‌جانبه اطلاعات، اطمینان می‌یابد که سایت شما بهینه، سریع و کاملاً سازگار با نیازهایتان باشد.',
+            title: ' راه‌اندازی و پشتیبانی',
+            desc: 'انتشار رسمی سایت و همراهی همیشگی برای رشد، به‌روزرسانی و موفقیت شما.',
             arrowSrc: null 
         }
     ];
