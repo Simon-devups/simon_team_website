@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { DynaPuff } from "next/font/google";
 import Navigation from "./AdminComponents/Navigation";
 import "./styles/globalAdmin.css";
+import { Toaster } from "sonner";
 
 export const metadata = {
   title: "Admin",
@@ -12,7 +13,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="rtl" style={{height: '100%'}}>
       <body style={{height: '100vh', margin: 0}}>
+
         <div id="portal-root"></div>
+
         {/* برنامه به اندازه ی ارتفاع صفحه ی هر دستگاه است */}
         <main style={{display: 'flex', height: '100%'}}>
           <div style={{display: 'flex' , justifyContent: 'center' , alignItems: 'center' , minHeight: '100vh', width: '80px' , minWidth: '80px' , borderLeftWidth: '2px' , borderColor: '#e5e7eb' , borderLeftStyle: 'solid' , padding: '.5rem'}}>
@@ -21,6 +24,9 @@ export default function RootLayout({ children }) {
           <div style={{flex: '1', overflow: 'auto'}} className="scroller">
             {children}
           </div>
+
+          <Toaster />
+
         </main>
       </body>
     </html>
