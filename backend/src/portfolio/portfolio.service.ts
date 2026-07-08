@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { PortfoliosResponseDto } from './dto/portfolio.dtos';
-import { PortfolioStatus } from 'generated/prisma';
+import { PortfolioStatus } from '@prisma/client';
 
 interface CreatePortfolioBody {
     title: string;

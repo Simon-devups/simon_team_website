@@ -2,7 +2,7 @@ import { Body, Controller, DefaultValuePipe, Delete, Get, Param, ParseIntPipe, P
 import { PortfolioService } from './portfolio.service';
 import { CreatePortfolioDto, PortfoliosResponseDto, UpdatePortfolioDto } from './dto/portfolio.dtos';
 import { Role } from 'src/decorators/roles.decorator';
-import { UserType } from 'generated/prisma';
+import { UserType } from '@prisma/client';
 import { User } from 'src/auth/decorators/user.decorator';
 import type {UserInfo} from 'src/auth/decorators/user.decorator';
 

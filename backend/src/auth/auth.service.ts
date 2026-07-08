@@ -2,7 +2,7 @@ import { ConflictException, HttpException, Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
 import * as bcrypt from 'bcryptjs';
 import * as jwt from 'jsonwebtoken';
-import { UserType } from 'generated/prisma';
+import { UserType } from '@prisma/client';
 
 const saltRound = 10;
 

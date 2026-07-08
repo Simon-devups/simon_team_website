@@ -1,7 +1,7 @@
 import { Body, Controller, Param, ParseEnumPipe, Post } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { LoginDto, RegisterDto } from './dto/auth.dtos';
-import { UserType } from 'generated/prisma';
+import { UserType } from '@prisma/client';
 import { Throttle } from '@nestjs/throttler';
 
 @Controller('auth')

@@ -4,7 +4,7 @@ import { User } from 'src/auth/decorators/user.decorator';
 import type { UserInfo } from 'src/auth/decorators/user.decorator';
 import { CreateRequestDto, RequestResponseDto } from './dto/consultation.dto';
 import { Role } from 'src/decorators/roles.decorator';
-import { UserType } from 'generated/prisma';
+import { UserType } from '@prisma/client';
 
 
 @Controller('consultation-request')

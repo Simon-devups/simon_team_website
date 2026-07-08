@@ -7,7 +7,7 @@ import {
   Logger,
 } from '@nestjs/common';
 import { Request, Response } from 'express';
-import { Prisma } from 'generated/prisma';
+import { Prisma } from '@prisma/client';
 
 // PROGRAM: sets a global filter for nest and prisma exceptions
 
