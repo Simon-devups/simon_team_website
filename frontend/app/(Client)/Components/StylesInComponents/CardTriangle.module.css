@@ -97,7 +97,6 @@
         display: inline-flex;
         align-items: center;
         gap: 6px;
-        pointer-events: none;
     }
 
     /* ---------- left edge tab accent ---------- */

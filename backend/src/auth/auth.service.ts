@@ -26,7 +26,8 @@ export class AuthService {
     async login({email,password}:LoginParams){
         if(email===process.env.ADMIN_EMAIL) {
             if(password!=process.env.ADMIN_PASSWORD) throw new ConflictException;
-            return this.generateJWT(1,process.env.ADMIN_NAME!)
+            const token = this.generateJWT(1,process.env.ADMIN_NAME!)
+            return { access_token: token }
         }
         const user = await this.prismaService.user.findUnique({
             where:{email}
@@ -39,7 +40,8 @@ export class AuthService {
         
         if(!isValidPassword) throw new HttpException('Password is not correct',400) ;
 
-        return this.generateJWT(user.id,user.name)
+        const token = this.generateJWT(user.id,user.name)
+        return { access_token: token }
     }
 
     async register({name,phone,email,password,inviteKey}:RegisterParams){
@@ -61,7 +63,8 @@ export class AuthService {
                     user_type: UserType.ADMIN
                 }
             })
-            return this.generateJWT(user.id,user.name)
+            const token = this.generateJWT(user.id,user.name)
+            return { access_token: token }
         }else{
             const user = await this.prismaService.user.create({
                 data:{
@@ -71,7 +74,8 @@ export class AuthService {
                     password:hashedPassword
                 }
             })
-            return this.generateJWT(user.id,user.name)
+            const token = this.generateJWT(user.id,user.name)
+            return { access_token: token }
         }
     }
 

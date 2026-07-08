@@ -6,101 +6,93 @@ import HilightedTitle from "../Components/HilightedTitle"
 import ConsultationForm from "../Components/requestform";
 import ConsultationFormlit from "../Components/requestformlit";
 import ConsultationBanner from "../Components/banner"
-import arrow from '../../public/arrow.svg'
+import arrow from '../../../public/arrow.svg'
+import GradientTitlefirst from "../Components/GradientTitlefirst"
 
 
+//این کامپوننت قراراست حذف شود و داینامیک نمیگیرد
 
 export default function Home() {
   return (
     <>
-    <div className={styles.pageContainer}>     
-      <section className={styles.sectionNeedd}>        
-      
-      <div className={styles.sectionNeedd__RightContainer}>
-        
-        <div className={styles.sectionNeedd__Right}> 
-          <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '100%' }}>
-            <HilightedTitle 
-              topSvgOffset={'-15px'}      
-              topSvgLeftOffset={'13px'}      
-              bottomSvgOffset={'-12px'}     
-              bottomSvgRightOffset={'0px'}
-            >
-              <p style={{ 
-                fontSize: '30px',
-                color: '#FFBA3B', 
-                fontFamily: 'koolak', 
-                textAlign: 'right', 
-                marginRight: '-28px',
-                marginBottom: '10px'
-              }}>
-                کــسب و کــار شــما چه <span style={{ color: '#175DE3' }}>نـــیازی بــه سایـــت</span> دارد ؟
+      <GradientTitlefirst />
+      <div className={styles.pageContainer}>
+        <section className={styles.sectionNeedd}>
+
+          <div className={styles.sectionNeedd__RightContainer}>
+
+            <div className={styles.sectionNeedd__Right}>
+              <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '100%' }}>
+                <HilightedTitle
+                  topSvgOffset={'-15px'}
+                  topSvgLeftOffset={'13px'}
+                  bottomSvgOffset={'-12px'}
+                  bottomSvgRightOffset={'0px'}
+                >
+                  <p
+                    className={styles.pone}
+                  >
+                    کــسب و کــار شــما چه <span style={{ color: '#175DE3' }}>نـــیازی بــه سایـــت</span> دارد ؟
+                  </p>
+                </HilightedTitle>
+                <Image
+                  src={arrow}
+                  className={styles.arrowIcon}
+
+                />
+              </div>
+
+              <p
+                style={{
+                  fontSize: '16px',
+                  fontWeight: '500',
+                  color: '#545658',
+                  textAlign: 'justify',
+                  width: '100%',
+                  maxWidth: '650px'
+                }}
+                className={styles.sectionNeed__RightText}>
+                تیم سـایمون از دل یک باور ساده متولد شد که هر کسب‌وکاری، هرچقدر هم کوچک، سزاوار حضوری قدرتمند در دنیای دیجیتال است. ما جمعی از معماران دیجیتال، طراحان خلاق و استراتژیست‌های حرفه‌ای هستیم که کنار هم آمده‌ایم تا برندها را از صفر تا اوج همراهی کنیم. در تیم سایمون، سایت فقط یک ابزار نیست ؛ خـانه دیجــیتال شماست که با دقت، خلاقیت و عشق ساخته می‌شود.تیم سـایمون از دل یک باور ساده متولد شد که هر کسب‌وکاری، هرچقدر هم کوچک، سزاوار حضوری قدرتمند در دنیای دیجیتال است. ما جمعی از معماران دیجیتال، طراحان خلاق و استراتژیست‌های حرفه‌ای هستیم.
               </p>
-            </HilightedTitle>
-              <Image 
-              src={arrow}              
-              style={{  
-              position: 'absolute',               
-              top: '45px',                                  
-              right: '405px',       
-              zIndex: 3,         
-              width: '53.35px',        
-              height: '30.44px' 
-                    }}
-              />            
-          </div>
-          
-          <p 
-            style={{
-    fontSize: '16px',          
-    fontWeight: '500',
-    color: '#545658',         
-    textAlign: 'justify', 
-    width: '100%',
-    maxWidth: '650px'
-            }} 
-            className={styles.sectionNeed__RightText}>
-            تیم سـایمون از دل یک باور ساده متولد شد که هر کسب‌وکاری، هرچقدر هم کوچک، سزاوار حضوری قدرتمند در دنیای دیجیتال است. ما جمعی از معماران دیجیتال، طراحان خلاق و استراتژیست‌های حرفه‌ای هستیم که کنار هم آمده‌ایم تا برندها را از صفر تا اوج همراهی کنیم. در تیم سایمون، سایت فقط یک ابزار نیست ؛ خـانه دیجــیتال شماست که با دقت، خلاقیت و عشق ساخته می‌شود.تیم سـایمون از دل یک باور ساده متولد شد که هر کسب‌وکاری، هرچقدر هم کوچک، سزاوار حضوری قدرتمند در دنیای دیجیتال است. ما جمعی از معماران دیجیتال، طراحان خلاق و استراتژیست‌های حرفه‌ای هستیم.
-          </p>
-        </div>
+            </div>
 
-        <div className={styles.featuresBox}>
-          <div className={styles.circleContainer}>
-            <span className={`${styles.circle} ${styles.purple}`}></span>
-            <span className={`${styles.circle} ${styles.darkBlue}`}></span>
-            <span className={`${styles.circle} ${styles.lightBlue}`}></span>
-          </div>
-          
-          <div className={styles.featuresGrid}>
-            <div className={styles.featureItem}>سامانه چت آنلاین</div>
-            <div className={styles.featureItem}>قالب سفارشی</div>
-            <div className={styles.featureItem}>سامانه چت آنلاین</div>
-            <div className={styles.featureItem}>سامانه پیامکی</div>
-            <div className={styles.featureItem}>سیستم فروشگاهی</div>
-            <div className={styles.featureItem}>اخذ درگاه بانکی</div>
-            <div className={styles.featureItem}>امکان اتصال به ترب</div>
-            <div className={styles.featureItem}>جست‌و‌جوی پیشرفته</div>
-          </div>
-        </div>
+            <div className={styles.featuresBox}>
+              <div className={styles.circleContainer}>
+                <span className={`${styles.circle} ${styles.purple}`}></span>
+                <span className={`${styles.circle} ${styles.darkBlue}`}></span>
+                <span className={`${styles.circle} ${styles.lightBlue}`}></span>
+              </div>
 
+              <div className={styles.featuresGrid}>
+                <div className={styles.featureItem}>سامانه چت آنلاین</div>
+                <div className={styles.featureItem}>قالب سفارشی</div>
+                <div className={styles.featureItem}>سامانه چت آنلاین</div>
+                <div className={styles.featureItem}>سامانه پیامکی</div>
+                <div className={styles.featureItem}>سیستم فروشگاهی</div>
+                <div className={styles.featureItem}>اخذ درگاه بانکی</div>
+                <div className={styles.featureItem}>امکان اتصال به ترب</div>
+                <div className={styles.featureItem}>جست‌و‌جوی پیشرفته</div>
+              </div>
+            </div>
+
+          </div>
+
+          <div className={styles.sectionNeedd__Leftt}>
+            <div className={styles.mockupWrapper}>
+              <Image
+                src="/1_1x_shots_so 1.svg"
+                alt="پیش‌نمایش سایت"
+                width={702}
+                height={1182}
+                className={styles.mockupImage}
+                priority
+              />
+            </div>
+          </div>
+
+        </section>
+        <ConsultationBanner />
       </div>
-
-      <div className={styles.sectionNeedd__Leftt}>
-        <div className={styles.mockupWrapper}>
-          <Image 
-            src="/1_1x_shots_so 1.svg" 
-            alt="پیش‌نمایش سایت"
-            width={702}      
-            height={1182}
-            className={styles.mockupImage}
-            priority
-          />
-        </div>
-      </div>   
-
-    </section>
-    <ConsultationBanner/>
-    </div>
 
     </>
   );

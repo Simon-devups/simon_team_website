@@ -1,59 +1,67 @@
+//api/auth/login
 import { NextResponse } from "next/server";
 
 export async function POST(request) {
     try {
         const body = await request.json();
-        const { identifier, password } = body;
+        const { email, password } = body;
 
-        if (!identifier || !password) {
+        if (!email || !password) {
             return NextResponse.json(
                 { error: 'لطفا تمام فیلد ها را وارد کنید' },
                 { status: 400 }
             )
-            // ۳. شبیه‌سازی یا برقراری ارتباط با بک‌اِند اصلی شما (مثلاً NestJS یا دیتابیس)
-            // در این مرحله شما باید اطلاعات را به بک‌اِند بفرستید. برای نمونه:
-            /*
-            const backendRes = await fetch('http://localhost:5000/auth/login', {
+        }
+
+        // ارسال درخواست به بک‌اند NestJS
+        const backendRes = await fetch('http://localhost:3000/auth/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ identifier, password })
-            });
-            const backendData = await backendRes.json();
-            */
+            body: JSON.stringify({ email, password })
+        });
 
+        const backendData = await backendRes.json();
 
-        }
-        if (password !== "1234") {
+        if (!backendRes.ok) {
             return NextResponse.json(
-                { error: 'رمز عبور وارد شده اشتباه است.' },
-                { status: 401 }
+                { error: backendData.message || 'خطا در ورود' },
+                { status: backendRes.status }
+            )
+        }
+
+        // بک‌اند اکنون { access_token: "..." } برمی‌گرداند
+        const token = backendData?.access_token;
+
+        if (!token) {
+            return NextResponse.json(
+                { error: 'توکن دریافت نشد' },
+                { status: 500 }
             )
         }
 
         const response = NextResponse.json(
-            { message: 'ورود با موفقیت انجام شد', user: { identifier } },
+            { message: 'ورود با موفقیت انجام شد', token },
             { status: 200 }
         );
 
-        // فرض می‌کنیم یک توکن فرضی به نام 'mock_token_xyz' داریم
+        // ذخیره token در cookie
         response.cookies.set({
             name: 'token',
-            value: 'mock_token_xyz',
+            value: token,
             httpOnly: true,
-            secure: process.env.NODE_ENV === 'production', // فعال بودن SSL در پروداکشن
+            secure: process.env.NODE_ENV === 'production',
             sameSite: 'strict',
             path: '/',
-            maxAge: 60*60*24*7 //haft rooz tarikh darad
+            maxAge: 60*60*24*7 // 7 روز
         });
+
         return response;
 
-
     }
-
     catch(err){
-        console.log('api login err' , err);
+        console.log('api login err', err);
         return NextResponse.json(
-            {error: 'خطای داخلی سرور رخ داده است'},
+            {error: 'خطای اتصال به سرور'},
             {status: 500}
         )
     }

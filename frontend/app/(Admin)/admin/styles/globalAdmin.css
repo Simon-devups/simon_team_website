@@ -1,0 +1,22 @@
+@font-face {
+    font-family: estedad;
+    src: url(../../../../public/fonts/Estedad-Medium.ttf);
+    font-weight: 400;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: estedad;
+}
+body{
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.scroller{
+    direction: ltr;
+    scrollbar-width: none;
+}
+.scroller > * {
+    direction: rtl;
+}

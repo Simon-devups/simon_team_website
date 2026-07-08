@@ -1,4 +1,3 @@
-'use client'
 import Image from "next/image";
 import "./globals.css"
 import styles from "./styles/HomePage.module.css"
@@ -16,16 +15,34 @@ import BlueCrosses from '../../public/Crosses.svg'
 import GradientTitle from "./Components/GradientTitle";
 import { CardTriangle } from "./Components/CardTriangle";
 
-export default function Home() {
+export default async function Home() {
+  let data = [];
+  try {
+    const response = await fetch('http://localhost:3000/portfolio?Page=1', {
+      cache: 'no-store',
+      next: { revalidate: 0 }
+    });
+    if (response.ok) {
+      data = await response.json();
+      data = Array.isArray(data) ? data.slice(0, 3) : [];
+    } else {
+      console.error('API Error:', response.status);
+    }
+  } catch (error) {
+    console.error('Failed to fetch portfolio:', error);
+    data = [];
+  }
+  console.log('Portfolio data:', data);
+
   return (
-    <div style={{ overflow: 'hidden', position: 'relative', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ marginTop: '50px', overflow: 'hidden', position: 'relative', display: 'flex', flexDirection: 'column' }}>
       <div className={styles.mainCont} style={{ position: 'relative', height: '500px', width: '100%', display: "flex", flexDirection: "column" }}>
 
         {/* <svg className={`middleAbsolute ${styles.first_svgCont}`} width="1080" height="422" viewBox="0 0 1080 422" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M40 2.5H863.737C872.098 2.50005 880.22 5.2948 886.811 10.4395L1063.07 148.022C1072.18 155.129 1077.5 166.034 1077.5 177.583V381.5C1077.5 402.211 1060.71 419 1040 419H216.263C207.902 419 199.78 416.205 193.189 411.061L16.9258 273.478C7.82175 266.371 2.50001 255.466 2.5 243.917V40C2.5 19.2893 19.2893 2.5 40 2.5Z" fill="#FFFAFA" stroke="#175DE3" strokeWidth="5" />
         </svg>
         <OrangeTriangle text={'مشاوره رایگان'} /> */}
-        <h1 className={`middleAbsolute ${styles.mainTitle}`} style={{ color: '#175DE3', fontSize: '4rem', textAlign: 'center' , textWrap: 'nowrap'}}>
+        <h1 className={`middleAbsolute ${styles.mainTitle}`} style={{ color: '#175DE3', fontSize: '4rem', textAlign: 'center', textWrap: 'nowrap' }}>
           با  تیم     <HilightedTitle fontSize={'8rem'} color={'#FEB020'}>ســـــایــمـــون</HilightedTitle><br></br>
           کسب و کارت رو آنلاین کن
         </h1>
@@ -197,17 +214,19 @@ export default function Home() {
       </section>
 
       <section className={styles.commentSection}>
-        <CardTriangle />
-        <CardTriangle />
-        <CardTriangle />
-
+        <CardTriangle id={data[0]?.id} />
+        <CardTriangle id={data[1]?.id} />
+        <CardTriangle id={data[2]?.id} />
       </section>
+      {data.map((itm) => {
+        return (<CardTriangle rawData={itm} />)
+      })}
 
       {/* شکل آبی بزرگ */}
       {/* xMidYMid slice را میتوان با
       none جایگزین کرد */}
       <section>
-        <svg style={{marginTop: '25px', overflow: 'visible'}} width="100%" height="580px" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1416 530" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg style={{ marginTop: '25px', overflow: 'visible' }} width="100%" height="580px" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1416 530" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_d_0_1)">
             <path d="M-28 80.1042C-28 80.1042 188.684 -19.0341 332 3.2685C470.207 24.776 549.115 116.421 690.5 116.538C833.045 116.656 888.793 70.9533 1031 63.8713C1171.26 56.8865 1412 116.538 1412 116.538V409.091C1412 409.091 1258.24 489.563 1091.5 499.273C966.983 506.525 849.298 457.024 724.5 461.036C579.504 465.697 477.14 499.384 332 499.273C186.295 499.162 -28 435.063 -28 435.063V80.1042Z" fill="url(#paint0_radial_0_1)" />
           </g>
