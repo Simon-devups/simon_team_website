@@ -10,13 +10,15 @@ import GradientTitlefirst from "../../Components/GradientTitlefirst"
 
 
 export default async function Home({ params }) {
-    const { id } = params || 1;
+    const { id } = params || 6;
+    // console.log(params.id)
     let data = null;
     try {
         const response = await fetch(`http://localhost:3000/portfolio/${id}`, {
             cache: 'no-store',
             next: { revalidate: 0 }
         })
+        console.log(response)
 
         if (response.ok) {
             data = await response.json();
