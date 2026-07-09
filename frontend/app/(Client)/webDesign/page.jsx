@@ -9,13 +9,30 @@ import GradientTitlefirst from "../Components/GradientTitlefirst"
 import arrow from '../../../public/arrow.svg'
 
 
-const page = () => {
+const page = async () => {
+    let data = [];
+    try {
+        const response = await fetch('http://localhost:3000/portfolio?Page=1', {
+            cache: 'no-store',
+            next: { revalidate: 0 }
+        });
+        if (response.ok) {
+            data = await response.json();
+            data = Array.isArray(data) ? data.slice(0, 3) : [];
+        } else {
+            console.error('API Error:', response.status);
+        }
+    } catch (error) {
+        console.error('Failed to fetch portfolio:', error);
+        data = [];
+    }
+    console.log('Portfolio data:', data);
     return (
-        
+
 
         <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <GradientTitlefirst text1="Website design " text2=" طــراحی وب ســایت"  />
-            <section style={{ padding: ' 0px 30px', marginTop: '-140px' , marginBottom: '-120px'}} className={styles.sectionNeed}>
+            <GradientTitlefirst text1="Website design " text2=" طــراحی وب ســایت" />
+            <section style={{ padding: ' 0px 30px', marginTop: '-140px', marginBottom: '-120px' }} className={styles.sectionNeed}>
                 <div className={styles.sectionNeed__Right}>
                     <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '100%' }}>
                         <HilightedTitle
@@ -31,20 +48,20 @@ const page = () => {
                                 marginRight: '-15px',
                                 marginBottom: '10px'
                             }}>
-                               طـــراحــی <span style={{ color: '#175DE3' }}>وب</span>  ســایــت
+                                طـــراحــی <span style={{ color: '#175DE3' }}>وب</span>  ســایــت
                             </p>
                         </HilightedTitle>
-            <Image
-              src={arrow}
-              style={{
-                position: 'absolute',
-                top: '45px',
-                right: '220px',
-                zIndex: 3,
-                width: '53.35px',
-                height: '30.44px'
-              }}
-            /> 
+                        <Image
+                            src={arrow}
+                            style={{
+                                position: 'absolute',
+                                top: '45px',
+                                right: '220px',
+                                zIndex: 3,
+                                width: '53.35px',
+                                height: '30.44px'
+                            }}
+                        />
                     </div>
                     <p
                         style={{
@@ -55,7 +72,7 @@ const page = () => {
                         }}
                         className={styles.sectionNeed__RightText}
                     >
-طراحی وب‌سایت، نقطه‌ی آغازین مسیر موفقیت دیجیتال کسب‌وکار شماست. ما در تیم سایمون، با درک عمیق از نیازهای شما و مخاطبان‌تان، سایتی منحصربه‌فرد و کاربرپسند طراحی می‌کنیم که نه‌تنها زیبا و چشم‌نواز است، بلکه سریع، امن و بهینه برای موتورهای جستجو نیز می‌باشد. فرقی نمی‌کند به دنبال سایت شرکتی، فروشگاهی، خبری یا شخصی باشید؛ ما با بهره‌گیری از جدیدترین فناوری‌های روز دنیا و رعایت اصول تجربه کاربری، وب‌سایتی حرفه‌ای برایتان خلق می‌کنیم. سایت شما در تیم سایمون، ویترینی پویا و تعاملی خواهد بود که هویت برندتان را به بهترین شکل ممکن به نمایش می‌گذارد.                    </p>
+                        طراحی وب‌سایت، نقطه‌ی آغازین مسیر موفقیت دیجیتال کسب‌وکار شماست. ما در تیم سایمون، با درک عمیق از نیازهای شما و مخاطبان‌تان، سایتی منحصربه‌فرد و کاربرپسند طراحی می‌کنیم که نه‌تنها زیبا و چشم‌نواز است، بلکه سریع، امن و بهینه برای موتورهای جستجو نیز می‌باشد. فرقی نمی‌کند به دنبال سایت شرکتی، فروشگاهی، خبری یا شخصی باشید؛ ما با بهره‌گیری از جدیدترین فناوری‌های روز دنیا و رعایت اصول تجربه کاربری، وب‌سایتی حرفه‌ای برایتان خلق می‌کنیم. سایت شما در تیم سایمون، ویترینی پویا و تعاملی خواهد بود که هویت برندتان را به بهترین شکل ممکن به نمایش می‌گذارد.                    </p>
 
                     <div style={{ display: 'flex', gap: '1.4rem', marginTop: '20px' }}>
 
@@ -155,9 +172,9 @@ const page = () => {
                 <GradientTitle text1="Sample work" text2="نـــمونــــه کــــار" />
 
                 <div className={styles.commentSection}>
-                    <CardTriangle />
-                    <CardTriangle />
-                    <CardTriangle />
+                    {data.map((itm) => {
+                        return (<CardTriangle rawData={itm} />)
+                    })}
                 </div>
             </section>
 

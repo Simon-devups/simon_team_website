@@ -218,6 +218,12 @@ export default async function Home() {
 
       </section>
 
+      <section className={styles.commentSection}>
+        {data.map((itm) => {
+          return (<CardTriangle rawData={itm} />)
+        })}
+      </section>
+
 
       <section>
         <svg style={{ marginTop: '25px', overflow: 'visible' }} width="100%" height="580px" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1416 530" fill="none" xmlns="http://www.w3.org/2000/svg">

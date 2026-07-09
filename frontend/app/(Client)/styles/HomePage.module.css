@@ -1195,6 +1195,10 @@ font-weight: 400;
 }
 
 }
+
+.mockupWrapper{
+    padding: 2rem;
+}
  
 @media (max-width: 1400px){
  .imgfour{       
