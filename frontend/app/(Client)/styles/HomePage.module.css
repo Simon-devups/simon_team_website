@@ -6,7 +6,7 @@
     background-position: center;
     background-repeat: no-repeat;
     width: 100vw !important;
-    margin: 2rem auto;
+    margin: 130px auto 0px auto;
     z-index: 10;
 }
 
@@ -39,6 +39,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .sectionNeeddd {
     margin-top: 100px;
     width: 100%;
@@ -70,7 +71,9 @@
 .simonIntroduceSection {
     direction: ltr;
 }
-
+.simonIntroduceSection__p{
+    text-align: justify;
+}
 .simonIntroduceSection__SvgCont{
     position: relative;
     background-color: #175DE3;
@@ -89,6 +92,7 @@
     top: 120px;
     right: 30%; */
     width: 15vw;
+    margin-right: 50px;
 }
 
 .simonIntroduceSection__FakeLogo{
@@ -101,7 +105,7 @@
 }
 
 .simonIntroduceSection__orangeArrow {
-    width: 15vw;
+    width: 10vw;
 }
 
 .simonIntroduceSection__paragraph {
@@ -241,7 +245,7 @@
 .commentSection{
     margin: 0 auto; 
     display: flex;  
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     gap: 1rem;
     margin-top: 2rem;
@@ -433,8 +437,9 @@
     align-items: flex-start;
     gap: 0px;
     width: 100%;
-    max-width: 1500px;
+    max-width: 1370px;
     padding: 0 35px;
+    margin: auto;
 }
 
 .contactLeftMap {
@@ -1050,21 +1055,21 @@ font-weight: 400;
     
 
 }
-
-.imgthree{           
-    position: absolute;           
-    top: -45px;   /* تنظیم عمودی */          
-    left: 38%;    /* تنظیم افقی */          
-    z-Index: -1;          
-    pointer-events: none;
-       }
 .imgfour{       
     position: absolute;       
-    top: -315px;   /* تنظیم عمودی */       
-    left: 10%;     /* تنظیم افقی */       
+    top: -350px;   /* تنظیم عمودی */       
+    left: 20%;     /* تنظیم افقی */       
     z-Index: -1;        
     pointer-Events: none;    
-}  
+} 
+.imgthree{           
+    position: absolute;           
+    top: -60px;   /* تنظیم عمودی */          
+    left: 45%;    /* تنظیم افقی */          
+    z-Index: -1;          
+    pointer-events: none;
+    }
+
 .imgsix{              
     position: absolute;           
     top: -240px;   /* تنظیم عمودی */          
@@ -1189,5 +1194,26 @@ font-weight: 400;
 
 }
 
+}
+
+.mockupWrapper{
+    padding: 2rem;
+}
+ 
+@media (max-width: 1400px){
+ .imgfour{       
+    position: absolute;       
+    top: -335px;   /* تنظیم عمودی */       
+    left: 10%;     /* تنظیم افقی */       
+    z-Index: -1;        
+    pointer-Events: none;    
+} 
+   .imgthree{           
+    position: absolute;           
+    top: -60px;   /* تنظیم عمودی */          
+    left: 43%;    /* تنظیم افقی */          
+    z-Index: -1;          
+    pointer-events: none;
+    } 
 }
 

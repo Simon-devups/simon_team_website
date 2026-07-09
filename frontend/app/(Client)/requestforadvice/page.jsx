@@ -15,10 +15,10 @@ import GradientTitlefirst from "../Components/GradientTitlefirst"
 export default function Home() {
   return (
     <>
-    <GradientTitlefirst/>
+    <GradientTitlefirst text1="Request for advice" text2="درخــواســت مشــاوره"/>
     <div className={styles.pageContainer}>
       
-      <section className={styles.mainContactSection}>
+      <section style={{ marginBottom:'250px'}} className={styles.mainContactSection}>
         
 
 
@@ -26,19 +26,28 @@ export default function Home() {
           
           <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '100%' }}>
             <HilightedTitle
-              topSvgOffset={'-15px'}      
-              topSvgLeftOffset={'13px'}      
+              topSvgOffset={'-10px'}      
+              topSvgLeftOffset={'0px'}      
               bottomSvgOffset={'-12px'}    
               bottomSvgRightOffset={'0px'}
             >
               <p 
-              className={styles.pone}>
-                کــسب و کــار شــما چه <span style={{ color: '#175DE3' }}>نـــیازی بــه سایـــت</span> دارد ؟
+              className={styles.pone}
+              style={{                 
+                  marginRight: '-10px',              
+                  marginBottom: '10px',
+              }}>                  
+                 نــــحــوه <span style={{ color: '#175DE3' }}>درخــــواســـت</span> مشـــاوره   
               </p>
             </HilightedTitle>
               <Image 
               src={arrow}              
               className={styles.arrowIcon}
+              style={{
+                top: '45px',
+                right: '290px',
+
+              }}              
               />            
           </div>
 
@@ -48,7 +57,7 @@ export default function Home() {
           <div className={styles.cardsRow}>
             <div className={styles.contactBox}>
               <div className={styles.contactBox__Left}>
-                <span className={styles.phoneNum}>09301731703</span>
+                <span className={styles.phoneNum}>09392171366</span>
                 <span className={styles.phoneTxt}>تلفن همراه</span>
               </div>
               <div className={styles.contactBox__Right}>
@@ -80,6 +89,15 @@ export default function Home() {
             <ConsultationFormlit/>
         </div>        
       </section>
+      <div style={{ position: 'relative', height: '0px', overflow: 'visible', zIndex: 0 }}>
+        <Image
+          className={styles.imgsix}
+          src="/Group 100.svg"
+          alt=""
+          width={674}
+          height={374}
+        />
+      </div>      
 <ConsultationBanner/>
     </div>
 

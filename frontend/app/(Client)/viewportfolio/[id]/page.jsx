@@ -40,7 +40,7 @@ export default async function Home({ params }) {
         <>
             <GradientTitlefirst />
             <div className={styles.pageContainer}>
-                <section className={styles.sectionNeedd}>
+                <section className={styles.sectionNeedd} style={{justifyContent:'center' , textAlign: 'center'}}>
 
                     <div className={styles.sectionNeedd__RightContainer}>
 
@@ -105,11 +105,10 @@ export default async function Home({ params }) {
 
                     <div className={styles.sectionNeedd__Leftt}>
                         <div className={styles.mockupWrapper}>
-                            <Image
+                            <img
                                 src={data?.images[0].url}
                                 alt="پیش‌نمایش سایت"
-                                width={702}
-                                height={1182}
+                                style={{maxWidth: "100%"}}                                
                                 className={styles.mockupImage}
                                 priority
                             />

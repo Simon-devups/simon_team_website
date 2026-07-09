@@ -15,24 +15,33 @@ import GradientTitlefirst from "../Components/GradientTitlefirst"
 export default function Home() {
   return (
     <>
-      <GradientTitlefirst />
+      <GradientTitlefirst  text1="About us" text2="دربــاره مــا"/>
       <section style={{ padding: ' 0px 30px', marginTop: '-20px' }} className={styles.sectionNeed}>
         <div className={styles.sectionNeed__Right}>
           <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '100%' }}>
             <HilightedTitle
-              topSvgOffset={'-15px'}
-              topSvgLeftOffset={'13px'}
+              topSvgOffset={'-10px'}
+              topSvgLeftOffset={'0px'}
               bottomSvgOffset={'-12px'}
               bottomSvgRightOffset={'0px'}>
               <p
                 className={styles.pone}
+                style={{
+                      marginRight: '-10px',              
+                      marginBottom: '10px',
+                }}
               >
-                کــسب و کــار شــما چه <span style={{ color: '#175DE3' }}>نـــیازی بــه سایـــت</span> دارد ؟
+               دربــاره <span style={{ color: '#175DE3' }}>تیـــم</span>  ســایمــون
               </p>
             </HilightedTitle>
             <Image
               src={arrow}
               className={styles.arrowIcon}
+              style={{
+                top: '45px',
+                right: '220px',
+
+              }}              
             />
 
           </div>
@@ -46,8 +55,7 @@ export default function Home() {
             }}
             className={styles.sectionNeed__RightText}
           >
-            تیم سـایمون از دل یک باور ساده متولد شد که هر کسب‌وکاری، هرچقدر هم کوچک، سزاوار حضوری قدرتمند در دنیای دیجیتال است. ما جمعی از معماران دیجیتال، طراحان خلاق و استراتژیست‌های حرفه‌ای هستیم که کنار هم آمده‌ایم تا برندها را از صفر تا اوج همراهی کنیم. در تیم سایمون، سایت فقط یک ابزار نیست ؛ خـانه دیجــیتال شماست که با دقت، خلاقیت و عشق ساخته می‌شود.تیم سـایمون از دل یک باور ساده متولد شد که هر کسب‌وکاری، هرچقدر هم کوچک، سزاوار حضوری قدرتمند در دنیای دیجیتال است. ما جمعی از معماران دیجیتال، طراحان خلاق و استراتژیست‌های حرفه‌ای هستیم.
-          </p>
+سایمون، نامی آشنا در عرصه‌ی طراحی دیجیتال، متشکل از تیمی جوان، خلاق و متخصص است. دفتر کار ما، فضایی پر از ایده‌های نو و نگاه‌های تازه به مقوله‌ی وب‌سایت و برندسازی است. هر یک از اعضای تیم، با تخصصی منحصربه‌فرد، پازلی را تکمیل می‌کند که نتیجه‌ی آن، آثاری ماندگار و کاربرپسند است. در سایمون، طراحی یک فرآیند خطی نیست؛ بلکه مسیری پویا، تعاملی و مبتنی بر شناخت عمیق از نیازهای واقعی کاربران است. ما به جای گفتن، با کارهایمان حرف می‌زنیم و کیفیت را فدای کمیت نمی‌کنیم.          </p>
 
         </div>
 
@@ -100,21 +108,29 @@ export default function Home() {
         <div className={styles.sectionNeed__Right}>
           <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '100%' }}>
             <HilightedTitle
-              topSvgOffset={'-15px'}
-              topSvgLeftOffset={'13px'}
+              topSvgOffset={'-10px'}
+              topSvgLeftOffset={'0px'}
               bottomSvgOffset={'-12px'}
               bottomSvgRightOffset={'0px'}
             >
               <p
                 className={styles.pone}
+                style={{                 
+                  marginRight: '-10px',              
+                  marginBottom: '10px',
+                }}
               >
-                کــسب و کــار شــما چه <span style={{ color: '#175DE3' }}>نـــیازی بــه سایـــت</span> دارد ؟
+                 اعــضای <span style={{ color: '#175DE3' }}>تیـــم</span> ســـایمــون
               </p>
             </HilightedTitle>
             <Image
               src={arrow}
               className={styles.arrowIcon}
+              style={{
+                top: '45px',
+                right: '230px',
 
+              }} 
             />
           </div>
 
@@ -128,8 +144,7 @@ export default function Home() {
               maxWidth: '650px'
             }}
             className={styles.sectionNeed__RightText}>
-            تیم سـایمون از دل یک باور ساده متولد شد که هر کسب‌وکاری، هرچقدر هم کوچک، سزاوار حضوری قدرتمند در دنیای دیجیتال است. ما جمعی از معماران دیجیتال، طراحان خلاق و استراتژیست‌های حرفه‌ای هستیم که کنار هم آمده‌ایم تا برندها را از صفر تا اوج همراهی کنیم. در تیم سایمون، سایت فقط یک ابزار نیست ؛ خـانه دیجــیتال شماست که با دقت، خلاقیت و عشق ساخته می‌شود.تیم سـایمون از دل یک باور ساده متولد شد که هر کسب‌وکاری، هرچقدر هم کوچک، سزاوار حضوری قدرتمند در دنیای دیجیتال است. ما جمعی از معماران دیجیتال، طراحان خلاق و استراتژیست‌های حرفه‌ای هستیم.
-          </p>
+تیم سایمون متشکل از چهار متخصص با چهار نقش کلیدی و مکمل است. هر یک از اعضا، با بهره‌گیری از تخصص و مهارت منحصربه‌فرد خود، مسئولیت بخش مشخصی از فرآیند طراحی و توسعه را بر عهده دارد. ساختار منظم تیم، بر اساس هماهنگی دقیق وظایف و تعامل مستمر میان اعضا شکل گرفته است. جلسات منظم، تقسیم‌کار شفاف و بازخوردهای سازنده، پایه‌های همکاری ما را مستحکم ساخته است. هرچند تعدادمان محدود است، اما با نظم و انضباطی مثال‌زدنی، پروژه‌ها را در زمان‌بندی دقیق و با کیفیتی بی‌نقص به سرانجام می‌رسانیم.          </p>
         </div>
       </section>
       <div style={{ position: 'relative', height: '0px', overflow: 'visible', zIndex: 0 }}>
@@ -145,19 +160,28 @@ export default function Home() {
         <div className={styles.sectionNeed__Right}>
           <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '100%' }}>
             <HilightedTitle
-              topSvgOffset={'-15px'}
-              topSvgLeftOffset={'13px'}
+              topSvgOffset={'-10px'}
+              topSvgLeftOffset={'0px'}
               bottomSvgOffset={'-12px'}
               bottomSvgRightOffset={'0px'}>
               <p
                 className={styles.pone}
+                style={{                 
+                  marginRight: '-10px',              
+                  marginBottom: '10px',
+                }}                
               >
-                کــسب و کــار شــما چه <span style={{ color: '#175DE3' }}>نـــیازی بــه سایـــت</span> دارد ؟
+               چــرا <span style={{ color: '#175DE3' }}>تیـــم</span>  ســایمــون ... ؟
               </p>
             </HilightedTitle>
             <Image
               src={arrow}
               className={styles.arrowIcon}
+              style={{
+                top: '45px',
+                right: '230px',
+
+              }}              
 
             />
 
@@ -173,8 +197,7 @@ export default function Home() {
             }}
             className={styles.sectionNeed__RightText}
           >
-            تیم سـایمون از دل یک باور ساده متولد شد که هر کسب‌وکاری، هرچقدر هم کوچک، سزاوار حضوری قدرتمند در دنیای دیجیتال است. ما جمعی از معماران دیجیتال، طراحان خلاق و استراتژیست‌های حرفه‌ای هستیم که کنار هم آمده‌ایم تا برندها را از صفر تا اوج همراهی کنیم. در تیم سایمون، سایت فقط یک ابزار نیست ؛ خـانه دیجــیتال شماست که با دقت، خلاقیت و عشق ساخته می‌شود.تیم سـایمون از دل یک باور ساده متولد شد که هر کسب‌وکاری، هرچقدر هم کوچک، سزاوار حضوری قدرتمند در دنیای دیجیتال است. ما جمعی از معماران دیجیتال، طراحان خلاق و استراتژیست‌های حرفه‌ای هستیم.
-          </p>
+چون ما فراتر از یک تیم طراحی، یک همراه استراتژیک برای کسب‌وکار شما هستیم. در تیم سایمون، هر پروژه با درکی عمیق از هویت، اهداف و مخاطبان برند شما آغاز می‌شود. ما باور داریم که هر کسب‌وکاری داستانی منحصربه‌فرد برای گفتن دارد و وظیفه‌ی ما، خلق بستری دیجیتال برای روایت آن داستان است. تخصص، تعهد و نگاه خلاقانه‌ی ما، تضمین‌کننده‌ی سایتی است که نه‌تنها چشم‌نواز است، بلکه کاربرپسند، سریع و بهینه برای موتورهای جستجو نیز می‌باشد. ما به جای تحویل پروژه، آغاز یک همراهی بلندمدت را رقم می‌زنیم.          </p>
 
         </div>
 
