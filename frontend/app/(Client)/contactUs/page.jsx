@@ -13,7 +13,7 @@ import GradientTitlefirst from "../Components/GradientTitlefirst"
 export default function Home() {
   return (
     <>
-    <GradientTitlefirst/>
+    <GradientTitlefirst  text1="Contact us" text2="تــماس بـا مـا "/>
     <div className={styles.pageContainer}>
       
       <section className={styles.mainContactSection}>
@@ -24,20 +24,29 @@ export default function Home() {
           
           <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '100%' }}>
             <HilightedTitle
-              topSvgOffset={'-15px'}      
-              topSvgLeftOffset={'13px'}      
+              topSvgOffset={'-10px'}      
+              topSvgLeftOffset={'5px'}      
               bottomSvgOffset={'-12px'}    
               bottomSvgRightOffset={'0px'}
             >
               <p 
               className={styles.pone}
+                style={{                 
+                  marginRight: '-10px',              
+                  marginBottom: '10px',
+                }}               
 >
-                کــسب و کــار شــما چه <span style={{ color: '#175DE3' }}>نـــیازی بــه سایـــت</span> دارد ؟
+                  بــــا مـا در <span style={{ color: '#175DE3' }}>ارتــــباط</span>  باشیــــد . . . 
               </p>
             </HilightedTitle>
               <Image 
               src={arrow}
-              className={styles.arrowIcon}             
+              className={styles.arrowIcon}
+              style={{
+                top: '45px',
+                right: '270px',
+
+              }}                             
               />            
           </div>
 
