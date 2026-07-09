@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { PortfoliosResponseDto } from './dto/portfolio.dtos';
-import { PortfolioStatus } from 'generated/prisma';
+import { PortfolioStatus } from '@prisma/client';
 
 interface CreatePortfolioBody {
     title: string;
@@ -29,7 +29,7 @@ interface UpdatePortfolioParams {
 export class PortfolioService {
     constructor(private readonly prismaService: PrismaService) { }
 
-    async getPortfolios(page?:number): Promise<PortfoliosResponseDto[]> {
+    async getPortfolios(page:number): Promise<PortfoliosResponseDto[]> {
         const portfolios = await this.prismaService.portfolio.findMany({
             select: {
                 id: true,
@@ -45,8 +45,8 @@ export class PortfolioService {
                     take: 1
                 }
             },
-            skip:(page ? page : 1)*12,
-            take:10
+            skip:(page-1)*15,
+            take:15
         });
 
         if (!portfolios) throw new NotFoundException;

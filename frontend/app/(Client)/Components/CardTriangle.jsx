@@ -9,7 +9,7 @@ export const CardTriangle = ({rawData}) => {
 
                 <div className={styles.card__content}>
                     <div className={styles.card__media}>
-                        <img src={rawData?.images[0].url ? rawData.images[0].url : "/tmp.png"} alt="RFID and GPS tracker product photo" />
+                        <img src={rawData?.image ? rawData.image : "/tmp.png"} alt="RFID and GPS tracker product photo" />
                     </div>
                     <div className={styles.card__body} >
                         <h3>{rawData?.title}</h3>
