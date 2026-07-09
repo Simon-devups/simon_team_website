@@ -214,13 +214,11 @@ export default async function Home() {
       </section>
 
       <section className={styles.commentSection}>
-        <CardTriangle id={data[0]?.id} />
-        <CardTriangle id={data[1]?.id} />
-        <CardTriangle id={data[2]?.id} />
+        {data.map((itm) => {
+          return (<CardTriangle rawData={itm} />)
+        })}
       </section>
-      {data.map((itm) => {
-        return (<CardTriangle rawData={itm} />)
-      })}
+
 
       {/* شکل آبی بزرگ */}
       {/* xMidYMid slice را میتوان با
