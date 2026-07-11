@@ -14,6 +14,8 @@ interface CreatePortfolioBody {
     projectDuration: string;
     projectDate: Date;
     status: PortfolioStatus;
+    color:string;
+    properties:string;
 }
 
 interface UpdatePortfolioParams {
@@ -79,7 +81,7 @@ export class PortfolioService {
     }
 
     async createPortfolio({ 
-        title, clientName, projectUrl, shortDescription, description, images, technologies, projectDate, projectDuration, status
+        title, clientName, projectUrl, shortDescription, description, images, technologies, projectDate, projectDuration, status,color,properties
     }: CreatePortfolioBody) {
         const portfolio = await this.prismaService.portfolio.create({
             data:{
@@ -91,7 +93,9 @@ export class PortfolioService {
                 technologies,
                 project_duration:projectDuration,
                 project_date:projectDate,
-                status:status
+                status:status,
+                color,
+                properties
             }
         })
 

@@ -32,6 +32,8 @@ async function main() {
         "A responsive corporate website built with Next.js, Prisma and PostgreSQL.",
       technologies: "Next.js, TypeScript, Prisma, PostgreSQL",
       project_duration: "2 Months",
+      color:"#4c96f6 - #4c96f6 - #4c96f6",
+      properties:"سامانه چت آنلاین - قالب سفارشی - سامانه پیامکی - سیستم فروشگاهی - اخذ درگاه بانکی - جست‌و‌جوی پیشرفته - امکان اتصال به ترب"
     },
     {
       title: "E-Commerce Platform",
@@ -42,6 +44,8 @@ async function main() {
         "Complete ecommerce platform with payment gateway and admin dashboard.",
       technologies: "React, Node.js, Express, PostgreSQL",
       project_duration: "4 Months",
+      color:"#4c96f6 - #4c96f6 - #4c96f6",
+      properties:"سامانه چت آنلاین - قالب سفارشی - سامانه پیامکی - سیستم فروشگاهی - اخذ درگاه بانکی - جست‌و‌جوی پیشرفته - امکان اتصال به ترب"
     },
     {
       title: "Restaurant Website",
@@ -52,6 +56,8 @@ async function main() {
         "Website with online reservation and digital menu management.",
       technologies: "Next.js, TailwindCSS, Prisma",
       project_duration: "1 Month",
+      color:"#4c96f6 - #4c96f6 - #4c96f6",
+      properties:"سامانه چت آنلاین - قالب سفارشی - سامانه پیامکی - سیستم فروشگاهی - اخذ درگاه بانکی - جست‌و‌جوی پیشرفته - امکان اتصال به ترب"
     },
     {
       title: "Hospital Management",
@@ -62,6 +68,8 @@ async function main() {
         "Patient management, appointment scheduling and reporting.",
       technologies: "NestJS, PostgreSQL, React",
       project_duration: "6 Months",
+      color:"#4c96f6 - #4c96f6 - #4c96f6",
+      properties:"سامانه چت آنلاین - قالب سفارشی - سامانه پیامکی - سیستم فروشگاهی - اخذ درگاه بانکی - جست‌و‌جوی پیشرفته - امکان اتصال به ترب"
     },
     {
       title: "CRM Dashboard",
@@ -72,6 +80,8 @@ async function main() {
         "CRM platform with customer tracking and analytics.",
       technologies: "Next.js, Prisma, PostgreSQL",
       project_duration: "3 Months",
+      color:"#4c96f6 - #4c96f6 - #4c96f6",
+      properties:"سامانه چت آنلاین - قالب سفارشی - سامانه پیامکی - سیستم فروشگاهی - اخذ درگاه بانکی - جست‌و‌جوی پیشرفته - امکان اتصال به ترب"
     },
     {
       title: "Real Estate Platform",
@@ -82,6 +92,8 @@ async function main() {
         "Real estate website with advanced filtering and maps.",
       technologies: "React, Node.js, MongoDB",
       project_duration: "5 Months",
+      color:"#4c96f6 - #4c96f6 - #4c96f6",
+      properties:"سامانه چت آنلاین - قالب سفارشی - سامانه پیامکی - سیستم فروشگاهی - اخذ درگاه بانکی - جست‌و‌جوی پیشرفته - امکان اتصال به ترب"
     },
     {
       title: "Learning Management System",
@@ -92,6 +104,8 @@ async function main() {
         "Video courses, quizzes and student management.",
       technologies: "Next.js, Prisma, PostgreSQL",
       project_duration: "4 Months",
+      color:"#4c96f6 - #4c96f6 - #4c96f6",
+      properties:"سامانه چت آنلاین - قالب سفارشی - سامانه پیامکی - سیستم فروشگاهی - اخذ درگاه بانکی - جست‌و‌جوی پیشرفته - امکان اتصال به ترب"
     },
     {
       title: "Portfolio Website",
@@ -102,6 +116,8 @@ async function main() {
         "Minimal and modern agency portfolio website.",
       technologies: "Next.js, TailwindCSS",
       project_duration: "3 Weeks",
+      color:"#4c96f6 - #4c96f6 - #4c96f6",
+      properties:"سامانه چت آنلاین - قالب سفارشی - سامانه پیامکی - سیستم فروشگاهی - اخذ درگاه بانکی - جست‌و‌جوی پیشرفته - امکان اتصال به ترب"
     },
     {
       title: "Travel Booking",
@@ -112,6 +128,8 @@ async function main() {
         "Booking flights, hotels and tour packages.",
       technologies: "React, Express, PostgreSQL",
       project_duration: "5 Months",
+      color:"#4c96f6 - #4c96f6 - #4c96f6",
+      properties:"سامانه چت آنلاین - قالب سفارشی - سامانه پیامکی - سیستم فروشگاهی - اخذ درگاه بانکی - جست‌و‌جوی پیشرفته - امکان اتصال به ترب"
     },
     {
       title: "Fitness App",
@@ -122,6 +140,8 @@ async function main() {
         "Membership and workout tracking platform.",
       technologies: "Next.js, Prisma",
       project_duration: "2 Months",
+      color:"#4c96f6 - #4c96f6 - #4c96f6",
+      properties:"سامانه چت آنلاین - قالب سفارشی - سامانه پیامکی - سیستم فروشگاهی - اخذ درگاه بانکی - جست‌و‌جوی پیشرفته - امکان اتصال به ترب"
     },
     {
       title: "News Portal",
@@ -132,6 +152,8 @@ async function main() {
         "News publishing platform with categories and comments.",
       technologies: "Next.js, PostgreSQL",
       project_duration: "2 Months",
+      color:"#4c96f6 - #4c96f6 - #4c96f6",
+      properties:"سامانه چت آنلاین - قالب سفارشی - سامانه پیامکی - سیستم فروشگاهی - اخذ درگاه بانکی - جست‌و‌جوی پیشرفته - امکان اتصال به ترب"
     },
     {
       title: "Accounting Software",
@@ -142,6 +164,8 @@ async function main() {
         "Financial reports and invoice management.",
       technologies: "NestJS, React",
       project_duration: "6 Months",
+      color:"#4c96f6 - #4c96f6 - #4c96f6",
+      properties:"سامانه چت آنلاین - قالب سفارشی - سامانه پیامکی - سیستم فروشگاهی - اخذ درگاه بانکی - جست‌و‌جوی پیشرفته - امکان اتصال به ترب"
     },
     {
       title: "Marketplace",
@@ -152,6 +176,8 @@ async function main() {
         "Marketplace with vendor management and payments.",
       technologies: "Next.js, Stripe, Prisma",
       project_duration: "7 Months",
+      color:"#4c96f6 - #4c96f6 - #4c96f6",
+      properties:"سامانه چت آنلاین - قالب سفارشی - سامانه پیامکی - سیستم فروشگاهی - اخذ درگاه بانکی - جست‌و‌جوی پیشرفته - امکان اتصال به ترب"
     },
     {
       title: "Event Management",
@@ -162,6 +188,8 @@ async function main() {
         "Conference and event registration system.",
       technologies: "React, Express",
       project_duration: "3 Months",
+      color:"#4c96f6 - #4c96f6 - #4c96f6",
+      properties:"سامانه چت آنلاین - قالب سفارشی - سامانه پیامکی - سیستم فروشگاهی - اخذ درگاه بانکی - جست‌و‌جوی پیشرفته - امکان اتصال به ترب"
     },
     {
       title: "Job Portal",
@@ -172,6 +200,8 @@ async function main() {
         "Job posting and resume management.",
       technologies: "Next.js, Prisma",
       project_duration: "4 Months",
+      color:"#4c96f6 - #4c96f6 - #4c96f6",
+      properties:"سامانه چت آنلاین - قالب سفارشی - سامانه پیامکی - سیستم فروشگاهی - اخذ درگاه بانکی - جست‌و‌جوی پیشرفته - امکان اتصال به ترب"
     },
     {
       title: "Medical Clinic",
@@ -182,6 +212,8 @@ async function main() {
         "Appointment booking with doctor profiles.",
       technologies: "Next.js, PostgreSQL",
       project_duration: "2 Months",
+      color:"#4c96f6 - #4c96f6 - #4c96f6",
+      properties:"سامانه چت آنلاین - قالب سفارشی - سامانه پیامکی - سیستم فروشگاهی - اخذ درگاه بانکی - جست‌و‌جوی پیشرفته - امکان اتصال به ترب"
     },
     {
       title: "Food Delivery",
@@ -192,6 +224,8 @@ async function main() {
         "Restaurant ordering and delivery management.",
       technologies: "React, Node.js",
       project_duration: "5 Months",
+      color:"#4c96f6 - #4c96f6 - #4c96f6",
+      properties:"سامانه چت آنلاین - قالب سفارشی - سامانه پیامکی - سیستم فروشگاهی - اخذ درگاه بانکی - جست‌و‌جوی پیشرفته - امکان اتصال به ترب"
     },
     {
       title: "Car Rental",
@@ -202,6 +236,8 @@ async function main() {
         "Vehicle reservation and payment platform.",
       technologies: "Next.js, Prisma",
       project_duration: "3 Months",
+      color:"#4c96f6 - #4c96f6 - #4c96f6",
+      properties:"سامانه چت آنلاین - قالب سفارشی - سامانه پیامکی - سیستم فروشگاهی - اخذ درگاه بانکی - جست‌و‌جوی پیشرفته - امکان اتصال به ترب"
     },
     {
       title: "Crypto Dashboard",
@@ -212,6 +248,8 @@ async function main() {
         "Portfolio tracking and market analytics.",
       technologies: "Next.js, Chart.js",
       project_duration: "2 Months",
+      color:"#4c96f6 - #4c96f6 - #4c96f6",
+      properties:"سامانه چت آنلاین - قالب سفارشی - سامانه پیامکی - سیستم فروشگاهی - اخذ درگاه بانکی - جست‌و‌جوی پیشرفته - امکان اتصال به ترب"
     },
     {
       title: "School Management",
@@ -222,6 +260,8 @@ async function main() {
         "Student, teacher and attendance management.",
       technologies: "NestJS, React, PostgreSQL",
       project_duration: "6 Months",
+      color:"#4c96f6 - #4c96f6 - #4c96f6",
+      properties:"سامانه چت آنلاین - قالب سفارشی - سامانه پیامکی - سیستم فروشگاهی - اخذ درگاه بانکی - جست‌و‌جوی پیشرفته - امکان اتصال به ترب"
     },
   ];
 
@@ -243,6 +283,8 @@ async function main() {
           Math.floor(Math.random() * 28) + 1
         ),
         status: PortfolioStatus.PUBLISHED,
+        color:item.color,
+        properties:item.properties,
         view_count: Math.floor(Math.random() * 5000),
 
         images: {

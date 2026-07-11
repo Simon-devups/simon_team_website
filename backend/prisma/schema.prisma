@@ -6,7 +6,6 @@
 
 generator client {
     provider = "prisma-client-js"
-    
 }
 
 datasource db {
@@ -23,20 +22,22 @@ model User {
 
     message Consultation[]
 
-    user_type  UserType  @default(USER)
+    user_type UserType @default(USER)
 
-    created_at           DateTime @default(now())
-    updated_at           DateTime @updatedAt
+    created_at DateTime @default(now())
+    updated_at DateTime @updatedAt
 }
 
 model Portfolio {
-    id                Int    @id @default(autoincrement())
+    id                Int      @id @default(autoincrement())
     title             String
     client_name       String
     project_url       String
     short_description String
     description       String
-    view_count        Int    @default(0)
+    color             String
+    properties        String
+    view_count        Int      @default(0)
 
     images Gallery[]
 
@@ -58,11 +59,11 @@ model Gallery {
 }
 
 model Consultation {
-    id  Int    @id @default(autoincrement())
+    id      Int    @id @default(autoincrement())
     message String
 
     user_id Int
-    user User @relation(fields: [user_id],references: [id])
+    user    User @relation(fields: [user_id], references: [id])
 }
 
 enum PortfolioStatus {

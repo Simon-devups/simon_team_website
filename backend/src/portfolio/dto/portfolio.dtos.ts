@@ -91,6 +91,14 @@ export class CreatePortfolioDto {
     @IsString()
     @IsNotEmpty()
     technologies!:string;
+
+    @IsString()
+    @IsNotEmpty()
+    color!:string;
+
+    @IsString()
+    @IsNotEmpty()
+    properties!:string;
     
     @IsString()
     @IsNotEmpty()
