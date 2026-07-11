@@ -225,7 +225,7 @@ export default async function Home() {
       </section>
 
 
-      <section>
+      {/* <section>
         <svg style={{ marginTop: '25px', overflow: 'visible' }} width="100%" height="580px" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1416 530" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_d_0_1)">
             <path d="M-28 80.1042C-28 80.1042 188.684 -19.0341 332 3.2685C470.207 24.776 549.115 116.421 690.5 116.538C833.045 116.656 888.793 70.9533 1031 63.8713C1171.26 56.8865 1412 116.538 1412 116.538V409.091C1412 409.091 1258.24 489.563 1091.5 499.273C966.983 506.525 849.298 457.024 724.5 461.036C579.504 465.697 477.14 499.384 332 499.273C186.295 499.162 -28 435.063 -28 435.063V80.1042Z" fill="url(#paint0_radial_0_1)" />
@@ -263,7 +263,7 @@ export default async function Home() {
             </radialGradient>
           </defs>
         </svg>
-      </section>
+      </section> */}
 
 
       <section className={styles.needingSection}>
@@ -322,14 +322,7 @@ export default async function Home() {
       <GradientTitle text1="Website design steps" text2="مراحل طراحی سایت" />
 
       <ProcessSteps />      
-      <section className={styles.commentSection}>
-        <CardTriangle id={data[0]?.id} />
-        <CardTriangle id={data[1]?.id} />
-        <CardTriangle id={data[2]?.id} />
-      </section>
-      {data.map((itm) => {
-        return (<CardTriangle rawData={itm} />)
-      })}
+      
 
       {/* شکل آبی بزرگ */}
       {/* xMidYMid slice را میتوان با
