@@ -49,7 +49,7 @@ const ConsultationForm = () => {
             };
             */
 
-            const res = await fetch('http://localhost:3000/consultation-requests', {
+            const res = await fetch('http://localhost:3000/consultation-request', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 // حالا فقط message را ارسال می‌کنیم

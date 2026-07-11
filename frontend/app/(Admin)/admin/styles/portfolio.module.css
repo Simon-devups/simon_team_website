@@ -8,6 +8,8 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
+    position: relative;
+    z-index: 2;
 }
 .createNew{
     position: absolute;
@@ -31,9 +33,10 @@
 .portfolioContainer{
     min-width: 200px;
     min-height: 200px;
-    background-color: bisque;
     border-top-right-radius: 16px;
     border-top-left-radius: 16px;
+    overflow: hidden;
+    object-fit: cover;
 }
 .portfolioContainer img{
     width: 100%;

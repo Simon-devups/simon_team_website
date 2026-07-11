@@ -11,9 +11,9 @@ import GradientTitlefirst from "../../Components/GradientTitlefirst"
 
 export default async function Home({ params }) {
     console.log(params);
-    
+
     const { id } = await params;
-    console.log('this is id ' , id)
+    console.log('this is id ', id)
     // console.log(params.id)
     let data = null;
     try {
@@ -29,18 +29,18 @@ export default async function Home({ params }) {
             console.error('API Error:', response.status);
         }
     }
-    catch(err) {
+    catch (err) {
         console.error('Failed to fetch portfolio:', err);
         data = null;
     }
     console.log('Portfolio data:', data);
-    
-    if(data === null) return <div>نمونه کاری که دنبالش بودید پیدا نشد :/</div>
+
+    if (data === null) return <div>نمونه کاری که دنبالش بودید پیدا نشد :/</div>
     return (
         <>
             <GradientTitlefirst />
             <div className={styles.pageContainer}>
-                <section className={styles.sectionNeedd} style={{justifyContent:'center' , textAlign: 'center'}}>
+                <section className={styles.sectionNeedd} style={{ justifyContent: 'center', textAlign: 'center' }}>
 
                     <div className={styles.sectionNeedd__RightContainer}>
 
@@ -75,29 +75,42 @@ export default async function Home({ params }) {
                                     maxWidth: '650px'
                                 }}
                                 className={styles.sectionNeed__RightText}>
-                                تیم سـایمون از دل یک باور ساده متولد شد که هر کسب‌وکاری، هرچقدر هم کوچک، سزاوار حضوری قدرتمند در دنیای دیجیتال است. ما جمعی از معماران دیجیتال، طراحان خلاق و استراتژیست‌های حرفه‌ای هستیم که کنار هم آمده‌ایم تا برندها را از صفر تا اوج همراهی کنیم. در تیم سایمون، سایت فقط یک ابزار نیست ؛ خـانه دیجــیتال شماست که با دقت، خلاقیت و عشق ساخته می‌شود.تیم سـایمون از دل یک باور ساده متولد شد که هر کسب‌وکاری، هرچقدر هم کوچک، سزاوار حضوری قدرتمند در دنیای دیجیتال است. ما جمعی از معماران دیجیتال، طراحان خلاق و استراتژیست‌های حرفه‌ای هستیم.
+                                {data?.description}
                             </p>
                         </div>
 
                         <div className={styles.featuresBox}>
-                            
+
                             {/* این قسمت در کاتالوگ نوشته شده فیلدی به صورت آرایه ندارد */}
                             <div className={styles.circleContainer}>
-                                <span className={`${styles.circle} ${styles.purple}`}></span>
-                                <span className={`${styles.circle} ${styles.darkBlue}`}></span>
-                                <span className={`${styles.circle} ${styles.lightBlue}`}></span>
+                                {data.colors ? data.colors.map((color) => {
+                                    <span className={styles.circle} style={{ backgroundColor: color }}></span>
+                                })
+                                    : <>
+                                        <span className={`${styles.circle} ${styles.purple}`}></span>
+                                        <span className={`${styles.circle} ${styles.darkBlue}`}></span>
+                                        <span className={`${styles.circle} ${styles.lightBlue}`}></span>
+                                    </>
+                                }
                             </div>
-                            
+
                             {/* این قسمت در کاتالوگ نوشته شده فیلدی به صورت آرایه ندارد */}
                             <div className={styles.featuresGrid}>
-                                <div className={styles.featureItem}>سامانه چت آنلاین</div>
-                                <div className={styles.featureItem}>قالب سفارشی</div>
-                                <div className={styles.featureItem}>سامانه چت آنلاین</div>
-                                <div className={styles.featureItem}>سامانه پیامکی</div>
-                                <div className={styles.featureItem}>سیستم فروشگاهی</div>
-                                <div className={styles.featureItem}>اخذ درگاه بانکی</div>
-                                <div className={styles.featureItem}>امکان اتصال به ترب</div>
-                                <div className={styles.featureItem}>جست‌و‌جوی پیشرفته</div>
+                                {data.properties ? data.properties.map((property) => {
+                                    <div className={styles.featureItem}>{property}</div>
+                                })
+                                    : <>
+                                        <div className={styles.featureItem}>سامانه چت آنلاین</div>
+                                        <div className={styles.featureItem}>قالب سفارشی</div>
+                                        <div className={styles.featureItem}>سامانه چت آنلاین</div>
+                                        <div className={styles.featureItem}>سامانه پیامکی</div>
+                                        <div className={styles.featureItem}>سیستم فروشگاهی</div>
+                                        <div className={styles.featureItem}>اخذ درگاه بانکی</div>
+                                        <div className={styles.featureItem}>امکان اتصال به ترب</div>
+                                        <div className={styles.featureItem}>جست‌و‌جوی پیشرفته</div>
+                                    </>
+                                }
+
                             </div>
                         </div>
 
@@ -108,7 +121,7 @@ export default async function Home({ params }) {
                             <img
                                 src={data?.images[0].url}
                                 alt="پیش‌نمایش سایت"
-                                style={{maxWidth: "100%"}}                                
+                                style={{ maxWidth: "100%" }}
                                 className={styles.mockupImage}
                                 priority
                             />

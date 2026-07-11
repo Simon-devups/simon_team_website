@@ -27,7 +27,7 @@ export default function PortalDelete({ onClose, id }) {
         setError(null);
 
         try {
-            const response = await fetch(`/portfolio/${id}`, {
+            const response = await fetch(`http://localhost:3000/portfolio/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ export default function PortalDelete({ onClose, id }) {
 
                 <input
                     onClick={handleDelete}
-                    style={{ bottom: '15px', left: '15px', top: 'unset', backgroundColor: '#e5484d' }}
+                    style={{zIndex: '100', bottom: '15px', left: '15px', top: 'unset', backgroundColor: '#e5484d' }}
                     className={styles.createNew}
                     type="submit"
                     value={loading ? 'در حال حذف...' : 'بله'}
@@ -73,7 +73,7 @@ export default function PortalDelete({ onClose, id }) {
                 />
                 <input
                     onClick={onClose}
-                    style={{ bottom: '15px', left: '65px', top: 'unset' }}
+                    style={{zIndex: '100', bottom: '15px', left: '65px', top: 'unset' }}
                     className={styles.createNew}
                     type="submit"
                     value="خیر"

@@ -13,7 +13,7 @@ export const CardTriangle = ({rawData}) => {
                     </div>
                     <div className={styles.card__body} >
                         <h3>{rawData?.title}</h3>
-                        <p className={styles.card__p}>{rawData?.description}</p>
+                        <p className={styles.card__p}>{rawData?.shortDescription}</p>
                         <Link href={`/viewportfolio/${rawData?.id}`} className={styles.card__cta} dir='ltr'> &larr; مشاهده جزئیات</Link>
                     </div>
                 </div>
